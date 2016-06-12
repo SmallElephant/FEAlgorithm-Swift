@@ -8,10 +8,6 @@
 
 import Foundation
 
-
-
-
-
 func reverseListNode(node:ListNode?) -> Void {
     if (node != nil) {
         if ((node?.next) != nil) {
@@ -44,5 +40,6 @@ node5.value=50
 node4.next=node5
 
 reverseListNode(node1)
+
 
         
