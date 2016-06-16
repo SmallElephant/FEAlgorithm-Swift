@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A85A8FF31D0D37470044FAAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF21D0D37470044FAAD /* main.swift */; };
 		A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */; };
+		A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95801D1156100003B255 /* ConstructBinaryTree.swift */; };
+		A89E95831D1156870003B255 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95821D1156870003B255 /* TreeNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		A85A8FEF1D0D37470044FAAD /* 5-Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "5-Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85A8FF21D0D37470044FAAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A89E95801D1156100003B255 /* ConstructBinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructBinaryTree.swift; sourceTree = "<group>"; };
+		A89E95821D1156870003B255 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				A85A8FF21D0D37470044FAAD /* main.swift */,
 				A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */,
+				A89E95801D1156100003B255 /* ConstructBinaryTree.swift */,
+				A89E95821D1156870003B255 /* TreeNode.swift */,
 			);
 			path = "5-Tree";
 			sourceTree = "<group>";
@@ -122,8 +128,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */,
 				A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */,
 				A85A8FF31D0D37470044FAAD /* main.swift in Sources */,
+				A89E95831D1156870003B255 /* TreeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +253,7 @@
 				A85A8FF81D0D37470044FAAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

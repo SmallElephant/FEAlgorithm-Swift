@@ -8,19 +8,7 @@
 
 import Foundation
 
-class TreeNode: NSObject {
-    var data:NSString?
-    var leftChild:TreeNode?
-    var rightChild:TreeNode?
-    
-    override init() {}
-    
-    init(data:NSString,leftChild:TreeNode?,rightChild:TreeNode?) {
-        self.data = data
-        self.leftChild = leftChild
-        self.rightChild = rightChild
-    }
-}
+
 
 func preOrder(rootNode:TreeNode?) -> Void {
     if rootNode != nil {
@@ -97,7 +85,7 @@ var a = TreeNode(data: "a",leftChild: b,rightChild: c)
 //let rootList="ab#d##c#e##"
 let rootList="ABD##E##CF###"
 var rootIndex = -1
-
+//二叉树创建
 func createTree(inout root:TreeNode?) -> Void {
     
     rootIndex=rootIndex+1
@@ -119,18 +107,35 @@ func createTree(inout root:TreeNode?) -> Void {
 }
 
 
-var rootNode:TreeNode?
-createTree(&rootNode)
-print("FlyElephant")
-print("先序遍历:")
-preOrder(rootNode)
-print("\n中序遍历:")
-inOrder(rootNode)
-print("\n后序遍历:")
-postOrder(rootNode)
-print("\n层次遍历:")
-levelOrder(rootNode)
-print()
+//var rootNode:TreeNode?
+//createTree(&rootNode)
+//print("FlyElephant")
+//print("先序遍历:")
+//preOrder(rootNode)
+//print("\n中序遍历:")
+//inOrder(rootNode)
+//print("\n后序遍历:")
+//postOrder(rootNode)
+//print("\n层次遍历:")
+//levelOrder(rootNode)
+//print()
+
+var constructTree = ConstructBinaryTree()
+var rePreOrder:[String] = ["1","2","4","7","3","5","6","8"]
+var reInOrder:[String] = ["4","7","2","1","5","3","8","6"]
+var rePostOrder:[String] = ["7","4","2","5","8","6","3","1"]
+var constructRoot = constructTree.reConstructForPost(rePreOrder, inOrder: reInOrder)
+print("FlyELephant")
+print("先序和中序输出后序:")
+postOrder(constructRoot)
+
+var preRoot = constructTree.reConstructForPre(reInOrder, postOrder: rePostOrder)
+print("\n中序和后序输出先序:")
+preOrder(preRoot)
+print("")
+
+
+
 
 
 
