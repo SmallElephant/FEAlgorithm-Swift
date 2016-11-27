@@ -79,6 +79,31 @@ func createTree(inout root:TreeNode?) -> Void {
 //preOrder(preRoot)
 //print("")
 
+
+
+func hexPosition(position:NSInteger)->NSInteger {
+    var result=1
+    for _  in 0..<position {
+        result = result*16
+    }
+    return result
+}
+
+func converHexToDecimal(number:String,radix:NSInteger)->NSInteger? {
+    let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+    var result=0
+    for digit in number.lowercaseString.characters {
+        if let range = digits.rangeOfString(String(digit)) {
+            let index: Int = digits.startIndex.distanceTo(range.startIndex)
+            if index>radix {
+                return nil
+            }
+            result=result*radix+index
+        }
+    }
+    return result
+}
+
 func binaryPosition(position:NSInteger)->NSInteger {
     var result=1
     for _  in 0..<position {
@@ -112,12 +137,21 @@ func convertNumberToHex(number:NSInteger)->String{
     return result
 }
 
-var binaryNumber="1111"
-var resultValue=convertBinaryToDecimal(binaryNumber)
-print("\(binaryNumber)的值:\(resultValue)")
+//var binaryNumber="1111"
+//var resultValue=convertBinaryToDecimal(binaryNumber)
+//print("\(binaryNumber)的值:\(resultValue)")
+//
+//var binaryHex=convertNumberToHex(resultValue)
+//print("FlyElephant:\(binaryHex)")
+//
+//var test=Int("a")
+//print("\(test)")
 
-var binaryHex=convertNumberToHex(resultValue)
-print("FlyElephant:\(binaryHex)")
+var convert=String(100,radix:16)
+print("FlyElephant-100的进制值:\(convert)")
+
+var  decimalNumber=converHexToDecimal(convert, radix: 16)
+print("FlyElephant-\(convert)的十进制\(decimalNumber!)")
 
 
 
