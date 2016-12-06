@@ -77,8 +77,9 @@ class ViewController: UIViewController {
         
         
         //let digitCount:Int = 2
-        self.printMaxDigits(digitCount: 3)
+//        self.printMaxDigits(digitCount: 3)
         
+        self.printToMaxDigits(digitCount: 2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,9 +87,70 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func printToMaxDigits(digitCount:Int) {
+        if digitCount <= 0 {
+            return
+        }
+        var number:[String] = [String].init(repeating: "0", count: digitCount)
+        while !self.incrementNumber(number: &number) {
+            print("打印数字---\(number)")
+        }
+    }
+    
+//    加1操作，从低位开始+1+carry，如果小于10，直接加1后break;
+//    如果大于10，则改位为+sum-10的值，置carry=1；如果最高位的值大于10，则说明溢出了，停止打印。
+//    public  boolean Increment(char[] number){
+//    boolean isOverflow=false;
+//    int carry=0;
+//    int length=number.length;
+//    //int sum=1;
+//    for(int length-1;i>=0;i--){
+//    int sum=number[i]-'0'+carry;
+//    if(i==length-1)
+//    sum++;
+//    if(sum>=10){
+//    if(i==0)
+//    {
+//    isOverflow=true;
+//    } else{
+//    sum-=sum;
+//    carry=1;
+//    number[i]=sum+'0';
+//    }
+//    }else {
+//    number[i]=sum+'0';
+//    break;
+//    }
+//    }
     
     
-    func printMaxDigits(digitCount:Int) -> Void {
+    func incrementNumber(number:inout [String]) -> Bool {
+
+        var isOverflow:Bool = false
+        var carry:Int = 0
+        var sum:Int = 1
+        for i in number.count-1...0 {
+            sum = Int(number[i])! + carry
+            if i == number.count-1 {
+                sum += 1
+            }
+            if sum >= 10 {
+                if i==0 {
+                    isOverflow = true
+                } else {
+                    sum -= 10
+                    carry = 1
+                    number[i] = String(sum)
+                }
+            } else {
+                number[i] = String(sum)
+                break
+            }
+        }
+        return isOverflow
+    }
+    
+    func printMaxDigits(digitCount:Int) {
         if digitCount <= 0 {
             return
         }
