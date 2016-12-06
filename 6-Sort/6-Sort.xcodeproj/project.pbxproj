@@ -15,6 +15,7 @@
 		C5045E881DEAFA2A0041BE60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5045E861DEAFA2A0041BE60 /* LaunchScreen.storyboard */; };
 		C5045E931DEAFA2A0041BE60 /* __SortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5045E921DEAFA2A0041BE60 /* __SortTests.swift */; };
 		C5045E9E1DEAFA2A0041BE60 /* __SortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5045E9D1DEAFA2A0041BE60 /* __SortUITests.swift */; };
+		C5A4362F1DF6FBB7004F5C90 /* MaxDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A4362E1DF6FBB7004F5C90 /* MaxDigit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C5045E991DEAFA2A0041BE60 /* 6-SortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "6-SortUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5045E9D1DEAFA2A0041BE60 /* __SortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __SortUITests.swift; sourceTree = "<group>"; };
 		C5045E9F1DEAFA2A0041BE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A4362E1DF6FBB7004F5C90 /* MaxDigit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxDigit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C5045E861DEAFA2A0041BE60 /* LaunchScreen.storyboard */,
 				C5045E891DEAFA2A0041BE60 /* Info.plist */,
 				A815F6AE1DF00F4100EA2B71 /* Power.swift */,
+				C5A4362E1DF6FBB7004F5C90 /* MaxDigit.swift */,
 			);
 			path = "6-Sort";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A4362F1DF6FBB7004F5C90 /* MaxDigit.swift in Sources */,
 				C5045E801DEAFA2A0041BE60 /* ViewController.swift in Sources */,
 				A815F6AF1DF00F4100EA2B71 /* Power.swift in Sources */,
 				C5045E7E1DEAFA2A0041BE60 /* AppDelegate.swift in Sources */,
