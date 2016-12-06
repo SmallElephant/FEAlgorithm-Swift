@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A815F6AF1DF00F4100EA2B71 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815F6AE1DF00F4100EA2B71 /* Power.swift */; };
 		C5045E7E1DEAFA2A0041BE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5045E7D1DEAFA2A0041BE60 /* AppDelegate.swift */; };
 		C5045E801DEAFA2A0041BE60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5045E7F1DEAFA2A0041BE60 /* ViewController.swift */; };
 		C5045E831DEAFA2A0041BE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5045E811DEAFA2A0041BE60 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A815F6AE1DF00F4100EA2B71 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		C5045E7A1DEAFA2A0041BE60 /* 6-Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6-Sort.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5045E7D1DEAFA2A0041BE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5045E7F1DEAFA2A0041BE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				C5045E841DEAFA2A0041BE60 /* Assets.xcassets */,
 				C5045E861DEAFA2A0041BE60 /* LaunchScreen.storyboard */,
 				C5045E891DEAFA2A0041BE60 /* Info.plist */,
+				A815F6AE1DF00F4100EA2B71 /* Power.swift */,
 			);
 			path = "6-Sort";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5045E801DEAFA2A0041BE60 /* ViewController.swift in Sources */,
+				A815F6AF1DF00F4100EA2B71 /* Power.swift in Sources */,
 				C5045E7E1DEAFA2A0041BE60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +507,7 @@
 				C5045EA41DEAFA2A0041BE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5045EA51DEAFA2A0041BE60 /* Build configuration list for PBXNativeTarget "6-SortTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				C5045EA71DEAFA2A0041BE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5045EA81DEAFA2A0041BE60 /* Build configuration list for PBXNativeTarget "6-SortUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				C5045EAA1DEAFA2A0041BE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

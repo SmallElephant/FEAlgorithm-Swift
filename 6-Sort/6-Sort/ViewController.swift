@@ -64,6 +64,21 @@ class ViewController: UIViewController {
         let sortArr:[Int] = [1,2,3,4,5]
         let tempArr = self.shuffleArray(arr: sortArr)
         print("随机数组:\(tempArr)")
+        // 计算需要改变m的二进制表示中的多少位才能得到n.15的二进制1111，1的二进制1 ，需要改变3位
+        let first:Int = 15
+        let next:Int = 1
+        let changeNum:Int = self.exchangeToSame(firstNum: first, secondNum: next)
+        print("FlyElephant-改变\(changeNum)位")
+        
+        let power:Power = Power()
+        print("计算结果:\(power.power(base: 0, exponent: 0))")
+        print("计算结果:\(power.power(base: 2, exponent: 3))")
+        print("计算结果:\(power.power(base: 1.2, exponent: 2))")
+        
+        
+        //let digitCount:Int = 2
+        self.printMaxDigits(digitCount: 3)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +86,64 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func printMaxDigits(digitCount:Int) -> Void {
+        if digitCount <= 0 {
+            return
+        }
+        var number:[String] = [String].init(repeating: "0", count: digitCount)
+        for i in 0..<10 {
+            number[0] = String(i)
+            self.printMaxDigitsRecursively(number: &number, length: digitCount, index: 0)
+        }
+    }
+    
+    
+    func printMaxDigitsRecursively(number:inout [String],length:Int,index:Int) -> Void {
+        if index == length-1 {
+            let result:String = number.joined(separator: "")
+            let str:String = self.removePreZeroString(data: result)
+            print("FlyElephant--\(str)")
+            return
+        }
+        
+        for i in 0..<10 {
+            number[index+1] = String(i)
+            self.printMaxDigitsRecursively(number: &number, length: length, index: index+1)
+        }
+    }
+    
+    func  removePreZeroString(data:String) -> String {
+        var stop:String.Index = data.index(data.startIndex, offsetBy: 0)
+        let result:String = data
+        for i in 0..<data.characters.count {
+            let index:String.Index = data.index(data.startIndex, offsetBy: i)
+            let currentChar: Character = data[index]
+            if i == data.characters.count-1 && currentChar == "0" {
+                stop = index
+                break
+            }
+            if  currentChar != "0"{
+                stop = index
+                break
+            }
+        }
+        return result.substring(from: stop)
+    }
+    
+
+    func exchangeToSame(firstNum:Int,secondNum:Int) -> Int {
+        var result:Int = firstNum ^ secondNum
+        var count:Int = 0
+        while result != 0 {
+            count += 1
+            result = result & (result-1)
+        }
+        return count
+    }
+    
+    // 随机交换
     func shuffleArray(arr:[Int]) -> [Int] {
         var data:[Int] = arr
         for i in 1..<arr.count {
