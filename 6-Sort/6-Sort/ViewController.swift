@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -89,7 +90,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-     
 
     func exchangeToSame(firstNum:Int,secondNum:Int) -> Int {
         var result:Int = firstNum ^ secondNum

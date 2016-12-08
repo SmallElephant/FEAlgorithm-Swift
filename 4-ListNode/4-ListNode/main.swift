@@ -8,18 +8,6 @@
 
 import Foundation
 
-func reverseListNode(node:ListNode?) -> Void {
-    if (node != nil) {
-        if ((node?.next) != nil) {
-            reverseListNode(node?.next!)
-        }
-        
-        if let nodeValue = node?.value! {
-            print("\(nodeValue)")
-        }
-    }
-}
-
 var node1=ListNode()
 node1.value=10
 
@@ -39,7 +27,20 @@ var node5 = ListNode()
 node5.value=50
 node4.next=node5
 
-reverseListNode(node1)
+var listManager:ListNodeManager = ListNodeManager()
+var head:ListNode?
+var firstNode:ListNode?
+var deleteNode:ListNode?
+listManager.createList(head: &head, data: 11)
+firstNode = head
 
+listManager.createList(head: &head, data: 12)
+listManager.createList(head: &head, data: 13)
+deleteNode = head
+listManager.createList(head: &head, data: 14)
+listManager.createList(head: &head, data: 15)
 
-        
+listManager.deleteNode(head: &firstNode, toBeDeleted: &deleteNode)
+print("FlyElephant")
+listManager.printList(head: firstNode)
+
