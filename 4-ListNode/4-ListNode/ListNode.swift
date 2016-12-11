@@ -16,7 +16,7 @@ class ListNode: NSObject {
 class ListNodeManager {
     
     
-    func printList(head:ListNode?) {
+    func printList(_ head:ListNode?) {
         var node:ListNode? = head
         while node != nil {
             print("\(node!.value!)")
@@ -24,7 +24,7 @@ class ListNodeManager {
         }
     }
     
-    func createList(head:inout ListNode?,data:Int) {
+    func createList(_ head:inout ListNode?,data:Int) {
         let node:ListNode = ListNode()
         node.value = data
         if head == nil {
