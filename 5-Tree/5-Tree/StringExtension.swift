@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     subscript(index:NSInteger)->Character {
-        return self[self.startIndex.advancedBy(index)]
+        return self[self.characters.index(self.startIndex, offsetBy: index)]
     }
     
     subscript(index:NSInteger)->String {
@@ -19,8 +19,8 @@ extension String {
     }
     
     subscript(range:Range<NSInteger>)->String {
-        let start = startIndex.advancedBy(range.startIndex)
-        let end = start.advancedBy(range.endIndex-range.startIndex)
+        let start = characters.index(startIndex, offsetBy: range.lowerBound)
+        let end = characters.index(start, offsetBy: range.upperBound-range.lowerBound)
         return self[Range(start..<end)]
     }
 }

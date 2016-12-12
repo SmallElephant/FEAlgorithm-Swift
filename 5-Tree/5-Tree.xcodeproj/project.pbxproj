@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82C9F521DFE7395007955AD /* TreeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C9F511DFE7395007955AD /* TreeUtil.swift */; };
 		A85A8FF31D0D37470044FAAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF21D0D37470044FAAD /* main.swift */; };
 		A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */; };
 		A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95801D1156100003B255 /* ConstructBinaryTree.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A82C9F511DFE7395007955AD /* TreeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeUtil.swift; sourceTree = "<group>"; };
 		A85A8FEF1D0D37470044FAAD /* 5-Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "5-Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85A8FF21D0D37470044FAAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				A89E95801D1156100003B255 /* ConstructBinaryTree.swift */,
 				A89E95821D1156870003B255 /* TreeNode.swift */,
 				C5159BFD1D1FB20600E34814 /* TreeOrder.swift */,
+				A82C9F511DFE7395007955AD /* TreeUtil.swift */,
 			);
 			path = "5-Tree";
 			sourceTree = "<group>";
@@ -106,6 +109,7 @@
 				TargetAttributes = {
 					A85A8FEE1D0D37470044FAAD = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -134,6 +138,7 @@
 				A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */,
 				A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */,
 				A85A8FF31D0D37470044FAAD /* main.swift in Sources */,
+				A82C9F521DFE7395007955AD /* TreeUtil.swift in Sources */,
 				A89E95831D1156870003B255 /* TreeNode.swift in Sources */,
 				C5159BFE1D1FB20600E34814 /* TreeOrder.swift in Sources */,
 			);
@@ -179,10 +184,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -218,23 +223,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		A85A8FF71D0D37470044FAAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A85A8FF81D0D37470044FAAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

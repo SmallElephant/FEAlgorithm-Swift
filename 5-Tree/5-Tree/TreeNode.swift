@@ -9,13 +9,13 @@
 import Foundation
 
 class TreeNode: NSObject {
-    var data:NSString?
+    var data:String?
     var leftChild:TreeNode?
     var rightChild:TreeNode?
     
     override init() {}
     
-    init(data:NSString,leftChild:TreeNode?,rightChild:TreeNode?) {
+    init(data:String?,leftChild:TreeNode?,rightChild:TreeNode?) {
         self.data = data
         self.leftChild = leftChild
         self.rightChild = rightChild

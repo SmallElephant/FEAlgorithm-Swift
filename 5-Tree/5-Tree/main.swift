@@ -28,43 +28,8 @@ var a = TreeNode(data: "a",leftChild: b,rightChild: c)
 //print()
 
 //let rootList="ab#d##c#e##"
-let rootList="ABD##E##CF###"
-var rootIndex = -1
-//二叉树创建
-func createTree(inout root:TreeNode?) -> Void {
-    
-    rootIndex=rootIndex+1
-    
-    if rootIndex>=rootList.characters.count {
-        return
-    }
-    
-    let data=rootList[rootIndex] as String
-    if data != "#" {
-        root = TreeNode()
-        root?.data = data
-        
-        createTree(&root!.leftChild)
-        createTree(&root!.rightChild)
-    } else {
-        root = nil
-    }
-}
 
 
-//var rootNode:TreeNode?
-//createTree(&rootNode)
-//print("FlyElephant")
-//print("先序遍历:")
-//preOrder(rootNode)
-//print("\n中序遍历:")
-//inOrder(rootNode)
-//print("\n后序遍历:")
-//postOrder(rootNode)
-//print("\n层次遍历:")
-//levelOrder(rootNode)
-//print()
-//
 //var constructTree = ConstructBinaryTree()
 //var rePreOrder:[String] = ["1","2","4","7","3","5","6","8"]
 //var reInOrder:[String] = ["4","7","2","1","5","3","8","6"]
@@ -81,7 +46,7 @@ func createTree(inout root:TreeNode?) -> Void {
 
 
 
-func hexPosition(position:NSInteger)->NSInteger {
+func hexPosition(_ position:NSInteger)->NSInteger {
     var result=1
     for _  in 0..<position {
         result = result*16
@@ -89,12 +54,12 @@ func hexPosition(position:NSInteger)->NSInteger {
     return result
 }
 
-func converHexToDecimal(number:String,radix:NSInteger)->NSInteger? {
+func converHexToDecimal(_ number:String,radix:NSInteger)->NSInteger? {
     let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
     var result=0
-    for digit in number.lowercaseString.characters {
-        if let range = digits.rangeOfString(String(digit)) {
-            let index: Int = digits.startIndex.distanceTo(range.startIndex)
+    for digit in number.lowercased().characters {
+        if let range = digits.range(of: String(digit)) {
+            let index: Int = digits.characters.distance(from: digits.startIndex, to: range.lowerBound)
             if index>radix {
                 return nil
             }
@@ -104,7 +69,7 @@ func converHexToDecimal(number:String,radix:NSInteger)->NSInteger? {
     return result
 }
 
-func binaryPosition(position:NSInteger)->NSInteger {
+func binaryPosition(_ position:NSInteger)->NSInteger {
     var result=1
     for _  in 0..<position {
         result = result*2
@@ -112,7 +77,7 @@ func binaryPosition(position:NSInteger)->NSInteger {
     return result
 }
 
-func convertBinaryToDecimal(binaryNumber:String)->NSInteger {
+func convertBinaryToDecimal(_ binaryNumber:String)->NSInteger {
     var result=0
     var temp:NSInteger
     var power:NSInteger
@@ -124,7 +89,7 @@ func convertBinaryToDecimal(binaryNumber:String)->NSInteger {
     return result
 }
 
-func convertNumberToHex(number:NSInteger)->String{
+func convertNumberToHex(_ number:NSInteger)->String{
     if number<=0 {
         return "0"
     }
@@ -152,6 +117,26 @@ print("FlyElephant-100的进制值:\(convert)")
 
 var  decimalNumber=converHexToDecimal(convert, radix: 16)
 print("FlyElephant-\(convert)的十进制\(decimalNumber!)")
+
+var util:TreeUtil = TreeUtil()
+var rootStr:String = "124##5##36##7##"
+var preRootNode:TreeNode?
+util.rootList = rootStr
+util.createTreeByPreOrder(root: &preRootNode)
+
+var treeOrder:TreeOrder = TreeOrder()
+print("先序遍历:")
+treeOrder.preOrder(preRootNode)
+print("\n中序遍历:")
+treeOrder.inOrder(preRootNode)
+print("\n后序遍历:")
+treeOrder.postOrder(preRootNode)
+print("\n层次遍历:")
+treeOrder.levelOrder(preRootNode)
+print()
+
+
+
 
 
 

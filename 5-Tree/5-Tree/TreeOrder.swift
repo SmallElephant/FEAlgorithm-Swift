@@ -6,54 +6,59 @@
 //  Copyright © 2016年 FlyElephant. All rights reserved.
 //
 
-func preOrder(rootNode:TreeNode?) -> Void {
-    if rootNode != nil {
-        if let data = rootNode?.data {
-            print("\(data)\t", terminator: "")
-            preOrder(rootNode?.leftChild)
-            preOrder(rootNode?.rightChild)
-        }
-    }
-}
-
-func inOrder(rootNode:TreeNode?) -> Void {
-    if rootNode != nil {
-        if let data = rootNode?.data {
-            inOrder(rootNode?.leftChild)
-            print("\(data)\t", terminator: "")
-            inOrder(rootNode?.rightChild)
-        }
-    }
-}
-
-func postOrder(rootNode:TreeNode?) -> Void {
-    if rootNode != nil {
-        if let data = rootNode?.data {
-            postOrder(rootNode?.leftChild)
-            postOrder(rootNode?.rightChild)
-            print("\(data)\t", terminator: "")
-        }
-    }
-}
-
-func levelOrder(rootNode:TreeNode?) -> Void {
-    var arr:[AnyObject]=[];
-    arr.append(rootNode!);
+class TreeOrder {
     
-    while arr.count>0 {
-        let firstNode=arr[0] as! TreeNode
-        
-        if let data=firstNode.data {
-            print("\(data)\t", terminator: "")
-            arr.removeFirst()
+    func preOrder(_ rootNode:TreeNode?) -> Void {
+        if rootNode != nil {
+            if let data = rootNode?.data {
+                print("\(data)\t", terminator: "")
+                preOrder(rootNode?.leftChild)
+                preOrder(rootNode?.rightChild)
+            }
         }
-        
-        if (firstNode.leftChild != nil) {
-            arr.append(firstNode.leftChild!)
+    }
+    
+    func inOrder(_ rootNode:TreeNode?) -> Void {
+        if rootNode != nil {
+            if let data = rootNode?.data {
+                inOrder(rootNode?.leftChild)
+                print("\(data)\t", terminator: "")
+                inOrder(rootNode?.rightChild)
+            }
         }
+    }
+    
+    // 后序输出
+    func postOrder(_ rootNode:TreeNode?) -> Void {
+        if rootNode != nil {
+            if let data = rootNode?.data {
+                postOrder(rootNode?.leftChild)
+                postOrder(rootNode?.rightChild)
+                print("\(data)\t", terminator: "")
+            }
+        }
+    }
+    
+    // 层级排序
+    func levelOrder(_ rootNode:TreeNode?) -> Void {
+        var arr:[AnyObject]=[];
+        arr.append(rootNode!);
         
-        if (firstNode.rightChild != nil) {
-            arr.append(firstNode.rightChild!)
+        while arr.count > 0 {
+            let firstNode=arr[0] as! TreeNode
+            
+            if let data = firstNode.data {
+                print("\(data)\t", terminator: "")
+                arr.removeFirst()
+            }
+            
+            if (firstNode.leftChild != nil) {
+                arr.append(firstNode.leftChild!)
+            }
+            
+            if (firstNode.rightChild != nil) {
+                arr.append(firstNode.rightChild!)
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class ConstructBinaryTree: NSObject {
 
-    func reConstructForPost(preOrder: [String],inOrder: [String]) -> TreeNode? {
+    func reConstructForPost(_ preOrder: [String],inOrder: [String]) -> TreeNode? {
 
         if inOrder.count == 0 {
             return nil
@@ -21,7 +21,7 @@ class ConstructBinaryTree: NSObject {
         var in_right:[String] = []
 
         let root = TreeNode()
-        root.data = preOrder[0] as NSString
+        root.data = (preOrder[0] as NSString) as String
         
         var rootIndex = 0
         //获取中序数组中的根节点位置
@@ -50,7 +50,8 @@ class ConstructBinaryTree: NSObject {
         return root
     }
     
-    func reConstructForPre(inOrder: [String],postOrder: [String]) -> TreeNode? {
+    // 先序
+    func reConstructForPre(_ inOrder: [String],postOrder: [String]) -> TreeNode? {
         
         if inOrder.count == 0 {
             return nil
@@ -62,7 +63,7 @@ class ConstructBinaryTree: NSObject {
         var post_right:[String] = []
         
         let preRoot = TreeNode()
-        preRoot.data = postOrder[postOrder.count-1] as NSString
+        preRoot.data = (postOrder[postOrder.count-1] as NSString) as String
         
         var rootIndex = 0
         //获取中序数组中的根节点位置
