@@ -118,30 +118,70 @@ print("100的进制值:\(convert)")
 var  decimalNumber=converHexToDecimal(convert, radix: 16)
 print("\(convert)的十进制\(decimalNumber!)")
 
+//var util:TreeUtil = TreeUtil()
+//var rootStr:String = "124##5##36##7##"
+//var preRootNode:TreeNode?
+//util.rootList = rootStr
+//util.createTreeByPreOrder(root: &preRootNode)
+//
+//var treeOrder:TreeOrder = TreeOrder()
+//
+//var mirrorTree:MirrorTree = MirrorTree()
+//mirrorTree.mirrorTree(rootNode: &preRootNode)
+//print("镜像")
+//treeOrder.levelOrder(preRootNode)
+//print()
+//
+//treeOrder.preOrder(preRootNode)
+//print()
+//
+//treeOrder.inOrder(preRootNode)
+//print()
+//treeOrder.postOrder(preRootNode)
+//print()
+//
+//treeOrder.levelOrder(preRootNode)
+//print()
+
 var util:TreeUtil = TreeUtil()
-var rootStr:String = "124##5##36##7##"
+var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
 var preRootNode:TreeNode?
-util.rootList = rootStr
-util.createTreeByPreOrder(root: &preRootNode)
+util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
 
 var treeOrder:TreeOrder = TreeOrder()
-
-var mirrorTree:MirrorTree = MirrorTree()
-mirrorTree.mirrorTree(rootNode: &preRootNode)
-print("镜像")
-treeOrder.levelOrder(preRootNode)
+var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
+print("层级数组--\(leveData!)")
 print()
 
-treeOrder.preOrder(preRootNode)
-print()
 
-treeOrder.inOrder(preRootNode)
-print()
-treeOrder.postOrder(preRootNode)
-print()
+func isOdd(number:Int) -> Bool {
+    return (number & 1) == 0
+}
 
-treeOrder.levelOrder(preRootNode)
-print()
+func reSortData(arr:inout [Int],conditionFunc:(Int)->Bool)  {
+    if arr.count == 0 {
+        return
+    }
+    var start:Int = 0
+    var end:Int = arr.count - 1
+    while start < end {
+        while start < end && !conditionFunc(arr[start]) {// 直接到偶数              
+            start += 1
+        }
+        while start < end && conditionFunc(arr[end]) {
+            end -= 1
+        }
+        if start < end {
+            swap(&arr[start], &arr[end])
+        }
+    }
+}
+
+var sortData:[Int] = [10,3,2,8,4,2,5,7,9]
+reSortData(arr: &sortData,conditionFunc: isOdd)
+print("(sortData)")
+
+
 
 
 

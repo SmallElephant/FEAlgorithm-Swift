@@ -8,6 +8,7 @@
 
 class TreeOrder {
     
+    // 先序输出
     func preOrder(_ rootNode:TreeNode?) -> Void {
         if rootNode != nil {
             if let data = rootNode?.data {
@@ -18,6 +19,7 @@ class TreeOrder {
         }
     }
     
+    // 中序输出
     func inOrder(_ rootNode:TreeNode?) -> Void {
         if rootNode != nil {
             if let data = rootNode?.data {
@@ -60,5 +62,31 @@ class TreeOrder {
                 arr.append(firstNode.rightChild!)
             }
         }
+    }
+    
+    //从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+    func levelOrderTree(rootNode:TreeNode?) -> [String]? {
+        if rootNode == nil {
+            return nil
+        }
+        
+        var levelArr:[String] = []
+        var data:[TreeNode] = [rootNode!]
+        
+        while data.count > 0 {
+            let headNode:TreeNode = data[0] 
+            data.remove(at: 0)
+            levelArr.append(headNode.data!)
+            
+            if headNode.leftChild != nil {
+                data.append(headNode.leftChild!)
+            }
+            
+            if headNode.rightChild != nil {
+                data.append(headNode.rightChild!)
+            }
+        }
+        
+        return levelArr
     }
 }

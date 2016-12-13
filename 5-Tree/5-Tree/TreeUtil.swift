@@ -38,7 +38,7 @@ class TreeUtil {
   //二叉树创建
     func createTreeByPreOrder(root:inout TreeNode?) -> Void {
         
-        rootIndex=rootIndex+1
+        rootIndex = rootIndex+1
         
         if rootIndex >= rootList.characters.count {
             return
@@ -54,7 +54,26 @@ class TreeUtil {
         } else {
             root = nil
         }
+    }
+    
+    func createTreeByPreOrderData(root:inout TreeNode?,listData:[String]) {
         
+        rootIndex = rootIndex+1
+        
+        if rootIndex >= listData.count {
+            return
+        }
+        
+        let data = listData[rootIndex] as String
+        if data != "#" {
+            root = TreeNode()
+            root?.data = data
+            
+            createTreeByPreOrderData(root: &root!.leftChild,listData: listData)
+            createTreeByPreOrderData(root: &root!.rightChild,listData: listData)
+        } else {
+            root = nil
+        }
     }
 
 }
