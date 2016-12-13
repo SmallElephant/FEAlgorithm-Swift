@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82C9F571DFED4BC007955AD /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C9F561DFED4BC007955AD /* Dimension.swift */; };
+		A82C9F591DFED526007955AD /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C9F581DFED526007955AD /* Fibonacci.swift */; };
 		C5E2DBE61D0C4C7E004AA024 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2DBE51D0C4C7E004AA024 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A82C9F561DFED4BC007955AD /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		A82C9F581DFED526007955AD /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		C5E2DBE21D0C4C7E004AA024 /* 3-Fibonacci */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "3-Fibonacci"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E2DBE51D0C4C7E004AA024 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				C5E2DBE51D0C4C7E004AA024 /* main.swift */,
+				A82C9F561DFED4BC007955AD /* Dimension.swift */,
+				A82C9F581DFED526007955AD /* Fibonacci.swift */,
 			);
 			path = "3-Fibonacci";
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 				TargetAttributes = {
 					C5E2DBE11D0C4C7E004AA024 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -119,7 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82C9F571DFED4BC007955AD /* Dimension.swift in Sources */,
 				C5E2DBE61D0C4C7E004AA024 /* main.swift in Sources */,
+				A82C9F591DFED526007955AD /* Fibonacci.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -217,6 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -239,6 +250,7 @@
 				C5E2DBEB1D0C4C7E004AA024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

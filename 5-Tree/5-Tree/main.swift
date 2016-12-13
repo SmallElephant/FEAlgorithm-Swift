@@ -113,10 +113,10 @@ func convertNumberToHex(_ number:NSInteger)->String{
 //print("\(test)")
 
 var convert=String(100,radix:16)
-print("FlyElephant-100的进制值:\(convert)")
+print("100的进制值:\(convert)")
 
 var  decimalNumber=converHexToDecimal(convert, radix: 16)
-print("FlyElephant-\(convert)的十进制\(decimalNumber!)")
+print("\(convert)的十进制\(decimalNumber!)")
 
 var util:TreeUtil = TreeUtil()
 var rootStr:String = "124##5##36##7##"
@@ -125,15 +125,43 @@ util.rootList = rootStr
 util.createTreeByPreOrder(root: &preRootNode)
 
 var treeOrder:TreeOrder = TreeOrder()
-print("先序遍历:")
-treeOrder.preOrder(preRootNode)
-print("\n中序遍历:")
-treeOrder.inOrder(preRootNode)
-print("\n后序遍历:")
-treeOrder.postOrder(preRootNode)
-print("\n层次遍历:")
+
+var mirrorTree:MirrorTree = MirrorTree()
+mirrorTree.mirrorTree(rootNode: &preRootNode)
+print("镜像")
 treeOrder.levelOrder(preRootNode)
 print()
+
+treeOrder.preOrder(preRootNode)
+print()
+
+treeOrder.inOrder(preRootNode)
+print()
+treeOrder.postOrder(preRootNode)
+print()
+
+treeOrder.levelOrder(preRootNode)
+print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

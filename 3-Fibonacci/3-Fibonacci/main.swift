@@ -8,60 +8,73 @@
 
 import Foundation
 
-//0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233……
 
-func fibonacci(n:NSInteger)->NSInteger{
-    if n<=0 {
-        return 0
-    }
-    if n==1 || n==2 {
-        return 1
-    }
-    return fibonacci(n-1)+fibonacci(n-2)
-}
-
-for index in 0...13 {
-    print("第\(index)项的值:\(fibonacci(index))")
-}
-
-//一只青蛙一次可以跳上 1 级台阶，也可以跳上2 级。青蛙跳上一个n级的台阶总共有多少种跳法。
-
-func jumpFloor(n:NSInteger)->NSInteger {
-    if n<=0 {
-        return 0
+func printMatrixClockwisly(data:[[Int]]?,rows:Int,cols:Int) {
+    if data == nil || rows <= 0  {
+        return;
     }
     
-    if n==1 {
-        return 1
+    var start:Int = 0
+    while start <= rows/2 && start <= cols/2 {
+        printMatrixInCircle(data:data!,rows:rows,cols:cols,start:start)
+        start += 1
     }
-    
-    if n==2 {
-        return 2
-    }
-    
-    return jumpFloor(n-1)+jumpFloor(n-2)
 }
 
-for index in 1...10 {
-    print("\(index)级台阶的跳法:\(jumpFloor(index))")
-}
-
-//一只青蛙一次可以跳上1级台阶，也可以跳上2 级……也可以跳上n 级，青蛙跳上一个n级的台阶总共有多少种跳法？
-
-func jumpLoopFloor(n:NSInteger)->NSInteger {
-    if n<=0 {
-        return 0
+func printMatrixInCircle(data:[[Int]],rows:Int,cols:Int,start:Int) {
+    let endX:Int = cols - 1 - start  //最大列
+    let endY:Int = rows - 1 - start // 最大行
+    
+    // 从左到右打印行
+    for i in start...endX {
+        let value:Int = data[start][i]
+        print("\(value)", terminator: " ")
     }
     
-    if n==1 {
-        return 1
+    if start < endY {
+        // 从上到下打印列
+        for i in start+1...endY {
+            let value:Int = data[i][endX]
+            print("\(value)", terminator: " ")
+        }
+    }
+
+    if start < endX && start+1 < endY {
+        // 从右向左打印行
+        for i in (start..<endX).reversed() {
+            let value:Int = data[endY][i]
+            print("\(value)", terminator: " ")
+        }
     }
     
-    return 2*jumpLoopFloor(n-1)
+    if start < endX && start+1 < endY {
+        // 从下到上打印行
+        for i in (start+1..<endY).reversed() {
+            let value:Int = data[i][start]
+            print("\(value)", terminator: " ")
+        }
+    }
+
 }
 
-for index in 1...10 {
-    print("\(index)级台阶跳法:\(jumpLoopFloor(index))")
-}
+
+
+
+var dimensionData = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+//var dimensionData = [[1,2,3,4,5,6],[7,8,9,10,11,12],[13,14,15,16,17,18],[19,20,21,22,23,24]]
+//dimensionData = [[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]]
+dimensionData = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+var rows = dimensionData.count
+var cols = dimensionData[0].count
+
+printMatrixClockwisly(data: dimensionData, rows: rows, cols: cols)
+print()
+//var test = dimensionData[3][2]
+//print("\(test)")
+
+
+
+
+
 
 
