@@ -6,7 +6,7 @@
 //  Copyright © 2016年 FlyElephant. All rights reserved.
 //
 
-func preOrder(rootNode:TreeNode?) -> Void {
+func preOrder(_ rootNode:TreeNode?) -> Void {
     if rootNode != nil {
         if let data = rootNode?.data {
             print("\(data)\t", terminator: "")
@@ -16,7 +16,7 @@ func preOrder(rootNode:TreeNode?) -> Void {
     }
 }
 
-func inOrder(rootNode:TreeNode?) -> Void {
+func inOrder(_ rootNode:TreeNode?) -> Void {
     if rootNode != nil {
         if let data = rootNode?.data {
             inOrder(rootNode?.leftChild)
@@ -26,7 +26,7 @@ func inOrder(rootNode:TreeNode?) -> Void {
     }
 }
 
-func postOrder(rootNode:TreeNode?) -> Void {
+func postOrder(_ rootNode:TreeNode?) -> Void {
     if rootNode != nil {
         if let data = rootNode?.data {
             postOrder(rootNode?.leftChild)
@@ -36,7 +36,7 @@ func postOrder(rootNode:TreeNode?) -> Void {
     }
 }
 
-func levelOrder(rootNode:TreeNode?) -> Void {
+func levelOrder(_ rootNode:TreeNode?) -> Void {
     var arr:[AnyObject]=[];
     arr.append(rootNode!);
     

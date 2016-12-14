@@ -12,6 +12,7 @@
 		A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95801D1156100003B255 /* ConstructBinaryTree.swift */; };
 		A89E95831D1156870003B255 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95821D1156870003B255 /* TreeNode.swift */; };
 		C5159BFE1D1FB20600E34814 /* TreeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5159BFD1D1FB20600E34814 /* TreeOrder.swift */; };
+		C55E7B841DFD79D80073F4CF /* SearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E7B831DFD79D80073F4CF /* SearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		A89E95801D1156100003B255 /* ConstructBinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructBinaryTree.swift; sourceTree = "<group>"; };
 		A89E95821D1156870003B255 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		C5159BFD1D1FB20600E34814 /* TreeOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeOrder.swift; sourceTree = "<group>"; };
+		C55E7B831DFD79D80073F4CF /* SearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				A89E95801D1156100003B255 /* ConstructBinaryTree.swift */,
 				A89E95821D1156870003B255 /* TreeNode.swift */,
 				C5159BFD1D1FB20600E34814 /* TreeOrder.swift */,
+				C55E7B831DFD79D80073F4CF /* SearchTree.swift */,
 			);
 			path = "5-Tree";
 			sourceTree = "<group>";
@@ -101,11 +104,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = FlyElephant;
 				TargetAttributes = {
 					A85A8FEE1D0D37470044FAAD = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -132,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */,
+				C55E7B841DFD79D80073F4CF /* SearchTree.swift in Sources */,
 				A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */,
 				A85A8FF31D0D37470044FAAD /* main.swift in Sources */,
 				A89E95831D1156870003B255 /* TreeNode.swift in Sources */,
@@ -156,8 +161,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -182,7 +189,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -201,8 +208,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -220,7 +229,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -228,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -235,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

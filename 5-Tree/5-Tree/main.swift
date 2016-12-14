@@ -31,7 +31,7 @@ var a = TreeNode(data: "a",leftChild: b,rightChild: c)
 let rootList="ABD##E##CF###"
 var rootIndex = -1
 //二叉树创建
-func createTree(inout root:TreeNode?) -> Void {
+func createTree( _ root:inout TreeNode?) -> Void {
     
     rootIndex=rootIndex+1
     
@@ -42,7 +42,7 @@ func createTree(inout root:TreeNode?) -> Void {
     let data=rootList[rootIndex] as String
     if data != "#" {
         root = TreeNode()
-        root?.data = data
+        root?.data = data as String?
         
         createTree(&root!.leftChild)
         createTree(&root!.rightChild)
@@ -81,7 +81,7 @@ func createTree(inout root:TreeNode?) -> Void {
 
 
 
-func hexPosition(position:NSInteger)->NSInteger {
+func hexPosition(_ position:NSInteger)->NSInteger {
     var result=1
     for _  in 0..<position {
         result = result*16
@@ -89,12 +89,12 @@ func hexPosition(position:NSInteger)->NSInteger {
     return result
 }
 
-func converHexToDecimal(number:String,radix:NSInteger)->NSInteger? {
+func converHexToDecimal(_ number:String,radix:NSInteger)->NSInteger? {
     let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
     var result=0
-    for digit in number.lowercaseString.characters {
-        if let range = digits.rangeOfString(String(digit)) {
-            let index: Int = digits.startIndex.distanceTo(range.startIndex)
+    for digit in number.lowercased().characters {
+        if let range = digits.range(of: String(digit)) {
+            let index: Int = digits.characters.distance(from: digits.startIndex, to: range.lowerBound)
             if index>radix {
                 return nil
             }
@@ -104,7 +104,7 @@ func converHexToDecimal(number:String,radix:NSInteger)->NSInteger? {
     return result
 }
 
-func binaryPosition(position:NSInteger)->NSInteger {
+func binaryPosition(_ position:NSInteger)->NSInteger {
     var result=1
     for _  in 0..<position {
         result = result*2
@@ -112,7 +112,7 @@ func binaryPosition(position:NSInteger)->NSInteger {
     return result
 }
 
-func convertBinaryToDecimal(binaryNumber:String)->NSInteger {
+func convertBinaryToDecimal(_ binaryNumber:String)->NSInteger {
     var result=0
     var temp:NSInteger
     var power:NSInteger
@@ -124,7 +124,7 @@ func convertBinaryToDecimal(binaryNumber:String)->NSInteger {
     return result
 }
 
-func convertNumberToHex(number:NSInteger)->String{
+func convertNumberToHex(_ number:NSInteger)->String{
     if number<=0 {
         return "0"
     }
@@ -154,5 +154,28 @@ var  decimalNumber=converHexToDecimal(convert, radix: 16)
 print("FlyElephant-\(convert)的十进制\(decimalNumber!)")
 
 
+var node1 = TreeNode(data: "4",leftChild: nil,rightChild: nil)
+var node2 = TreeNode(data: "7",leftChild: nil,rightChild: nil)
 
+var node3 = TreeNode(data: "2",leftChild: node1,rightChild: node2)
+var node4 = TreeNode(data: "9",leftChild: nil,rightChild: nil)
+
+var node5 = TreeNode(data: "8",leftChild: node4,rightChild: node3)
+var node6 = TreeNode(data: "7",leftChild: nil,rightChild: nil)
+
+var rootNode = TreeNode(data: "8",leftChild: node5,rightChild: node6)
+
+var cnode1 = TreeNode(data: "9",leftChild: nil,rightChild: nil)
+var cnode2 = TreeNode(data: "2",leftChild: nil,rightChild: nil)
+var subRootNode = TreeNode(data: "8",leftChild: cnode1,rightChild: cnode2)
+
+
+var searchTree:SearchTree = SearchTree()
+var result:Bool = searchTree.hasSubTree(root: rootNode, subRoot: subRootNode)
+
+if result {
+    print("FlyElephat-包含子🌲")
+} else {
+    print("FlyElephat-不包含子🌲")
+}
 
