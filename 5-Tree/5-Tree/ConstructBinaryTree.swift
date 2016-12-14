@@ -50,6 +50,7 @@ class ConstructBinaryTree: NSObject {
         return root
     }
     
+    // 先序
     func reConstructForPre(_ inOrder: [String],postOrder: [String]) -> TreeNode? {
         
         if inOrder.count == 0 {

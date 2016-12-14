@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TreeNode:NSObject {
+class TreeNode: NSObject {
     var data:String?
     var leftChild:TreeNode?
     var rightChild:TreeNode?

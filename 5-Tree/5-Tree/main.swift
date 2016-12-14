@@ -28,43 +28,8 @@ var a = TreeNode(data: "a",leftChild: b,rightChild: c)
 //print()
 
 //let rootList="ab#d##c#e##"
-let rootList="ABD##E##CF###"
-var rootIndex = -1
-//二叉树创建
-func createTree( _ root:inout TreeNode?) -> Void {
-    
-    rootIndex=rootIndex+1
-    
-    if rootIndex>=rootList.characters.count {
-        return
-    }
-    
-    let data=rootList[rootIndex] as String
-    if data != "#" {
-        root = TreeNode()
-        root?.data = data as String?
-        
-        createTree(&root!.leftChild)
-        createTree(&root!.rightChild)
-    } else {
-        root = nil
-    }
-}
 
 
-//var rootNode:TreeNode?
-//createTree(&rootNode)
-//print("FlyElephant")
-//print("先序遍历:")
-//preOrder(rootNode)
-//print("\n中序遍历:")
-//inOrder(rootNode)
-//print("\n后序遍历:")
-//postOrder(rootNode)
-//print("\n层次遍历:")
-//levelOrder(rootNode)
-//print()
-//
 //var constructTree = ConstructBinaryTree()
 //var rePreOrder:[String] = ["1","2","4","7","3","5","6","8"]
 //var reInOrder:[String] = ["4","7","2","1","5","3","8","6"]
@@ -147,35 +112,112 @@ func convertNumberToHex(_ number:NSInteger)->String{
 //var test=Int("a")
 //print("\(test)")
 
-var convert=String(100,radix:16)
-print("FlyElephant-100的进制值:\(convert)")
+//var convert=String(100,radix:16)
+//print("100的进制值:\(convert)")
 
-var  decimalNumber=converHexToDecimal(convert, radix: 16)
-print("FlyElephant-\(convert)的十进制\(decimalNumber!)")
+//var  decimalNumber=converHexToDecimal(convert, radix: 16)
+//print("\(convert)的十进制\(decimalNumber!)")
+
+//var util:TreeUtil = TreeUtil()
+//var rootStr:String = "124##5##36##7##"
+//var preRootNode:TreeNode?
+//util.rootList = rootStr
+//util.createTreeByPreOrder(root: &preRootNode)
+//
+//var treeOrder:TreeOrder = TreeOrder()
+//
+//var mirrorTree:MirrorTree = MirrorTree()
+//mirrorTree.mirrorTree(rootNode: &preRootNode)
+//print("镜像")
+//treeOrder.levelOrder(preRootNode)
+//print()
+//
+//treeOrder.preOrder(preRootNode)
+//print()
+//
+//treeOrder.inOrder(preRootNode)
+//print()
+//treeOrder.postOrder(preRootNode)
+//print()
+//
+//treeOrder.levelOrder(preRootNode)
+//print()
+
+//var util:TreeUtil = TreeUtil()
+//var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
+//var preRootNode:TreeNode?
+//util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
+//
+//var treeOrder:TreeOrder = TreeOrder()
+//var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
+//print("层级数组--\(leveData!)")
+//print()
 
 
-var node1 = TreeNode(data: "4",leftChild: nil,rightChild: nil)
-var node2 = TreeNode(data: "7",leftChild: nil,rightChild: nil)
+// 二叉搜索树的后序遍历集合
+var util:TreeUtil = TreeUtil()
+var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
+var preRootNode:TreeNode?
+util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
 
-var node3 = TreeNode(data: "2",leftChild: node1,rightChild: node2)
-var node4 = TreeNode(data: "9",leftChild: nil,rightChild: nil)
-
-var node5 = TreeNode(data: "8",leftChild: node4,rightChild: node3)
-var node6 = TreeNode(data: "7",leftChild: nil,rightChild: nil)
-
-var rootNode = TreeNode(data: "8",leftChild: node5,rightChild: node6)
-
-var cnode1 = TreeNode(data: "9",leftChild: nil,rightChild: nil)
-var cnode2 = TreeNode(data: "2",leftChild: nil,rightChild: nil)
-var subRootNode = TreeNode(data: "8",leftChild: cnode1,rightChild: cnode2)
-
-
-var searchTree:SearchTree = SearchTree()
-var result:Bool = searchTree.hasSubTree(root: rootNode, subRoot: subRootNode)
-
+var treeOrder:TreeOrder = TreeOrder()
+var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
+print("层级数组--\(leveData!)")
+treeOrder.preOrder(preRootNode)
+print("")
+var postData:[Int] = [5,7,6,9,11,10,8]
+var searchTree:BinarySearchTree = BinarySearchTree()
+var result:Bool = false
+result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
-    print("FlyElephat-包含子🌲")
+    print("\(postData)是后序序列")
 } else {
-    print("FlyElephat-不包含子🌲")
+    print("\(postData)不是后序序列")
 }
+
+
+postData = [5,6,11,10,8]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+postData = [7,4,6,5]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+postData = [2,3,1]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+postData = [10,9,8,7]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+postData = [5,7,6,8]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+
+
+
+
 
