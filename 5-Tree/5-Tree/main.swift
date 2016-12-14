@@ -167,7 +167,8 @@ treeOrder.preOrder(preRootNode)
 print("")
 var postData:[Int] = [5,7,6,9,11,10,8]
 var searchTree:BinarySearchTree = BinarySearchTree()
-var result = searchTree.VerifySquenceOfBST(arr: postData)
+var result:Bool = false
+result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
     print("\(postData)是后序序列")
 } else {
@@ -176,7 +177,7 @@ if result {
 
 
 postData = [5,6,11,10,8]
-result = searchTree.VerifySquenceOfBST(arr: postData)
+result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
     print("\(postData)是后序序列")
 } else {
@@ -184,12 +185,29 @@ if result {
 }
 
 postData = [7,4,6,5]
-result = searchTree.VerifySquenceOfBST(arr: postData)
+result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
     print("\(postData)是后序序列")
 } else {
     print("\(postData)不是后序序列")
 }
+
+postData = [2,3,1]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
+postData = [10,9,8,7]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
 
 
 
