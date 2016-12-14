@@ -40,17 +40,21 @@ class BinarySearchTree {
         }
         
         var data = arr
-        if rightIndex == arr.count-2 {
-            if leftIndex == 0 || leftIndex == arr.count-1 {
-                return verifyPostDataOfBST(arr: Array(data[leftIndex..<arr.count-1]))
+        let count:Int = arr.count
+        
+        if rightIndex == count-2 {
+            // mid == right 只有左子树 mid = 0 arr[end-1] > arr[end] 只有右子树
+            let isRight:Bool = (leftIndex == 0 && arr[count-2] > arr[count-1])
+            if(leftIndex == rightIndex || isRight) { // 只有左子树或者只有右子树
+                return verifyPostDataOfBST(arr: Array(data[leftIndex..<count-1]))
+            } else if(leftIndex == 0) {
+                return false
             } else {
                 return verifyPostDataOfBST(arr: Array(data[0..<leftIndex])) && verifyPostDataOfBST(arr: Array(data[leftIndex..<arr.count-1]))
             }
         } else {
             return false
         }
-        
-
     }
     
     
@@ -68,7 +72,7 @@ class BinarySearchTree {
             return true;
         }
         
-        var mid:Int = begin;
+        var mid:Int = begin
         for i in 0..<end{
             mid = i
             if  arr[i] > arr[end] { //左子树的节点都小于根节点
@@ -84,8 +88,12 @@ class BinarySearchTree {
         }
     
         if right == end-1 {
-            if(mid == begin || mid == end) {// 只有左子树或者只有右子树
+            // mid == right 只有左子树 mid = 0 arr[end-1] > arr[end] 只有右子树
+            let isRight:Bool = (mid == 0 && arr[end-1] > arr[end])
+            if(mid == right || isRight) { // 只有左子树或者只有右子树
                 return isPostOrder(arr: arr, begin:begin, end:end-1)
+            } else if(mid == 0) {
+                return false
             } else {
                 return (isPostOrder(arr: arr, begin:begin, end:mid-1) && isPostOrder(arr: arr, begin:mid, end:end-1))
             }

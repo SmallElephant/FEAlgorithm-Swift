@@ -192,6 +192,14 @@ if result {
     print("\(postData)不是后序序列")
 }
 
+postData = [7,6,4,5]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
 postData = [2,3,1]
 result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
@@ -200,14 +208,14 @@ if result {
     print("\(postData)不是后序序列")
 }
 
-postData = [10,9,8,7]
+postData = [9,11,10,8]
 result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
     print("\(postData)是后序序列")
 } else {
     print("\(postData)不是后序序列")
 }
-
+//
 postData = [5,7,6,8]
 result = searchTree.verifyPostDataOfBST(arr: postData)
 if result {
