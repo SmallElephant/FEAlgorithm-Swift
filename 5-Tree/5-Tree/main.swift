@@ -208,6 +208,14 @@ if result {
     print("\(postData)不是后序序列")
 }
 
+postData = [5,7,6,8]
+result = searchTree.verifyPostDataOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
+
 
 
 
