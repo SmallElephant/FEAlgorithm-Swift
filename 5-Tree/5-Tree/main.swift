@@ -112,11 +112,11 @@ func convertNumberToHex(_ number:NSInteger)->String{
 //var test=Int("a")
 //print("\(test)")
 
-var convert=String(100,radix:16)
-print("100的进制值:\(convert)")
+//var convert=String(100,radix:16)
+//print("100的进制值:\(convert)")
 
-var  decimalNumber=converHexToDecimal(convert, radix: 16)
-print("\(convert)的十进制\(decimalNumber!)")
+//var  decimalNumber=converHexToDecimal(convert, radix: 16)
+//print("\(convert)的十进制\(decimalNumber!)")
 
 //var util:TreeUtil = TreeUtil()
 //var rootStr:String = "124##5##36##7##"
@@ -143,6 +143,18 @@ print("\(convert)的十进制\(decimalNumber!)")
 //treeOrder.levelOrder(preRootNode)
 //print()
 
+//var util:TreeUtil = TreeUtil()
+//var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
+//var preRootNode:TreeNode?
+//util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
+//
+//var treeOrder:TreeOrder = TreeOrder()
+//var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
+//print("层级数组--\(leveData!)")
+//print()
+
+
+// 二叉搜索树的后序遍历集合
 var util:TreeUtil = TreeUtil()
 var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
 var preRootNode:TreeNode?
@@ -151,59 +163,33 @@ util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
 var treeOrder:TreeOrder = TreeOrder()
 var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
 print("层级数组--\(leveData!)")
-print()
-
-
-func isOdd(number:Int) -> Bool {
-    return (number & 1) == 0
+treeOrder.preOrder(preRootNode)
+print("")
+var postData:[Int] = [5,7,6,9,11,10,8]
+var searchTree:BinarySearchTree = BinarySearchTree()
+var result = searchTree.VerifySquenceOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
 }
 
-func reSortData(arr:inout [Int],conditionFunc:(Int)->Bool)  {
-    if arr.count == 0 {
-        return
-    }
-    var start:Int = 0
-    var end:Int = arr.count - 1
-    while start < end {
-        while start < end && !conditionFunc(arr[start]) {// 直接到偶数              
-            start += 1
-        }
-        while start < end && conditionFunc(arr[end]) {
-            end -= 1
-        }
-        if start < end {
-            swap(&arr[start], &arr[end])
-        }
-    }
+
+postData = [5,6,11,10,8]
+result = searchTree.VerifySquenceOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
 }
 
-var sortData:[Int] = [10,3,2,8,4,2,5,7,9]
-reSortData(arr: &sortData,conditionFunc: isOdd)
-print("(sortData)")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+postData = [7,4,6,5]
+result = searchTree.VerifySquenceOfBST(arr: postData)
+if result {
+    print("\(postData)是后序序列")
+} else {
+    print("\(postData)不是后序序列")
+}
 
 
 
