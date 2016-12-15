@@ -102,39 +102,47 @@ class BinarySearchTree {
         }
     }
 
-    
-    static func verifyPreDataOfBST(arr:[Int]) -> Bool {
+    // 是否是先序遍历集合
+    func verifyPreDataOfBST(arr:[Int]) -> Bool {
         if arr.count == 0 {
             return false
         }
+        
+        if arr.count == 1 {
+            return true
+        }
+        
         var leftIndex:Int = 0
         let root:Int = arr[0] // 首位数字是根节点
-        for i in 1..<arr.count {
+        let count:Int = arr.count
+        for i in 1..<count {
             leftIndex = i
             if  arr[i] > root { //左子树的节点都小于根节点
                 break
             }
         }
         
-        for i in leftIndex..<arr.count {
+        var rightIndex:Int = leftIndex
+        for i in leftIndex..<count {
+            rightIndex = i
             if arr[i] < root { // 右子树的节点都大于根节点
-                return false
+                break
             }
         }
         
-        var isLeft = true
         var data = arr
-        if leftIndex > 0 {
-            isLeft = verifyPreDataOfBST(arr: Array(data[1..<leftIndex]))
+        if rightIndex == count-1 {
+            // leftIndex = rightIndex = count-1 只有左子树
+            // leftIndex data[rightIndex] > data[0] 只有右子树
+            if leftIndex == rightIndex || (leftIndex == 1 && data[rightIndex] > data[0]) { // 只有左子树
+              return  verifyPreDataOfBST(arr: Array(data[1..<count]))
+            } else if (leftIndex == 1) {
+                return false
+            } else {
+                return verifyPreDataOfBST(arr: Array(data[1..<leftIndex])) && verifyPreDataOfBST(arr: Array(data[leftIndex..<arr.count]))
+            }
+        } else {
+            return false
         }
-        
-        var isRight = true
-        if leftIndex < arr.count-1 {
-            isRight = verifyPreDataOfBST(arr: Array(data[leftIndex..<arr.count]))
-        }
-        
-        return isLeft && isRight
     }
-    
-    
 }
