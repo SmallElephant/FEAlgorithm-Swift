@@ -109,3 +109,43 @@ searchNode.printList(mergeResultNode)
 
 
 
+var randomHead:RandomListNode = RandomListNode()
+randomHead.data = "A"
+
+var randomNode1:RandomListNode = RandomListNode()
+randomNode1.data = "B"
+randomHead.next = randomNode1
+
+var randomNode2:RandomListNode = RandomListNode()
+randomNode2.data = "C"
+randomNode1.next = randomNode2
+
+var randomNode3:RandomListNode = RandomListNode()
+randomNode3.data = "D"
+randomNode2.next = randomNode3
+
+var randomNode4:RandomListNode = RandomListNode()
+randomNode4.data = "E"
+randomNode3.next = randomNode4
+
+randomHead.sibling = randomNode2
+randomNode1.sibling = randomNode4
+randomNode3.sibling = randomNode1
+
+var pHead:RandomListNode? = randomHead
+var clone:RandomListClone = RandomListClone()
+clone.randomListNodeClone(headNode: &pHead)
+while pHead != nil {
+    print("FlyElephant-随机节点--\(pHead!.data)---👬--\(pHead!.sibling?.data)")
+    pHead = pHead?.next
+}
+
+
+
+
+
+
+
+
+
+
