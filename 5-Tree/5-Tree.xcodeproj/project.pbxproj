@@ -15,6 +15,7 @@
 		A89E95831D1156870003B255 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E95821D1156870003B255 /* TreeNode.swift */; };
 		A8B5C0031E00F2C900E404FA /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5C0021E00F2C900E404FA /* BinarySearchTree.swift */; };
 		C5159BFE1D1FB20600E34814 /* TreeOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5159BFD1D1FB20600E34814 /* TreeOrder.swift */; };
+		C57505511E02D0CF00DEB624 /* BinaryTreePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57505501E02D0CF00DEB624 /* BinaryTreePath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		A89E95821D1156870003B255 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		A8B5C0021E00F2C900E404FA /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		C5159BFD1D1FB20600E34814 /* TreeOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeOrder.swift; sourceTree = "<group>"; };
+		C57505501E02D0CF00DEB624 /* BinaryTreePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTreePath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				A82C9F511DFE7395007955AD /* TreeUtil.swift */,
 				A82C9F541DFE9A09007955AD /* MirrorTree.swift */,
 				A8B5C0021E00F2C900E404FA /* BinarySearchTree.swift */,
+				C57505501E02D0CF00DEB624 /* BinaryTreePath.swift */,
 			);
 			path = "5-Tree";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89E95811D1156100003B255 /* ConstructBinaryTree.swift in Sources */,
+				C57505511E02D0CF00DEB624 /* BinaryTreePath.swift in Sources */,
 				A85A8FFA1D0D37EB0044FAAD /* StringExtension.swift in Sources */,
 				A85A8FF31D0D37470044FAAD /* main.swift in Sources */,
 				A82C9F521DFE7395007955AD /* TreeUtil.swift in Sources */,

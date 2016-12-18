@@ -155,19 +155,19 @@ func convertNumberToHex(_ number:NSInteger)->String{
 
 
 // 二叉搜索树的后序遍历集合
-var util:TreeUtil = TreeUtil()
-var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
-var preRootNode:TreeNode?
-util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
+//var util:TreeUtil = TreeUtil()
+//var rootData:[String] = ["8","6","5","#","#","7","#","#","10","9","#","#","11","#","#"]
+//var preRootNode:TreeNode?
+//util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
 
-var treeOrder:TreeOrder = TreeOrder()
-var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
-print("层级数组--\(leveData!)")
-treeOrder.preOrder(preRootNode)
-print("")
-var postData:[Int] = [5,7,6,9,11,10,8]
-var searchTree:BinarySearchTree = BinarySearchTree()
-var result:Bool = false
+//var treeOrder:TreeOrder = TreeOrder()
+//var leveData:[String]? = treeOrder.levelOrderTree(rootNode: preRootNode)
+//print("层级数组--\(leveData!)")
+//treeOrder.preOrder(preRootNode)
+//print("")
+//var postData:[Int] = [5,7,6,9,11,10,8]
+//var searchTree:BinarySearchTree = BinarySearchTree()
+//var result:Bool = false
 //result = searchTree.verifyPostDataOfBST(arr: postData)
 //if result {
 //    print("\(postData)是后序序列")
@@ -224,48 +224,29 @@ var result:Bool = false
 //    print("\(postData)不是后序序列")
 //}
 
-var preData = [8,6,5,7,10,9,11]
-result = searchTree.verifyPreDataOfBST(arr: preData)
-if result {
-    print("\(preData)是先序序列")
-} else {
-    print("\(preData)不是先序序列")
-}
+//var preData = [8,6,5,7,10,9,11]
+//result = searchTree.verifyPreDataOfBST(arr: preData)
+//if result {
+  //  print("\(preData)是先序序列")
+//} else {
+  //  print("\(preData)不是先序序列")
+//}
 
-preData = [8,6,5,7]
-result = searchTree.verifyPreDataOfBST(arr: preData)
-if result {
-    print("\(preData)是先序序列")
-} else {
-    print("\(preData)不是先序序列")
-}
-
-preData = [8,10,9,11]
-result = searchTree.verifyPreDataOfBST(arr: preData)
-if result {
-    print("\(preData)是先序序列")
-} else {
-    print("\(preData)不是先序序列")
-}
-
-preData = [8,10,9,4]
-result = searchTree.verifyPreDataOfBST(arr: preData)
-if result {
-    print("\(preData)是先序序列")
-} else {
-    print("\(preData)不是先序序列")
-}
-
-preData = [8,10,4,9]
-result = searchTree.verifyPreDataOfBST(arr: preData)
-if result {
-    print("\(preData)是先序序列")
-} else {
-    print("\(preData)不是先序序列")
-}
+//preData = [8,6,5,7]
+//preData = [8,10,9,11]
+//preData = [8,10,9,4]
+//preData = [8,10,4,9]
 
 
+var util:TreeUtil = TreeUtil()
+var rootData:[String] = ["10","5","4","#","#","7","#","#","12","#","#"]
+var preRootNode:TreeNode?
+util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
 
+var treePath:BinaryTreePath = BinaryTreePath()
+var target = 22
+var result = treePath.findTreePath(rootNode: preRootNode, targert: target)
+print("FlyElephant-和\(target)的路径---\(result!)")
 
 
 
