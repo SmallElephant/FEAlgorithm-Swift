@@ -56,6 +56,13 @@ if popResult {
 } else {
     print("\(popData)不是\(pushData)栈的pop子序列")
 }
+//1,2,3,2,2,2,5,4,2
+var searchArr:[Int] = [1,2,3,2,2,2,5,4,2]
+var search:SearchArray = SearchArray()
+var halfNum:Int? = search.moreThanHalfNum(arr: searchArr)
+if halfNum != nil {
+    print("FlyElephant--超过一半的数字---\(halfNum!)")
+}
 
 
 
