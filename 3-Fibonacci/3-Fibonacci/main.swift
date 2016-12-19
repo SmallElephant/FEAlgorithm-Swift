@@ -56,7 +56,36 @@ if popResult {
 } else {
     print("\(popData)不是\(pushData)栈的pop子序列")
 }
+//1,2,3,2,2,2,5,4,2
+var searchArr:[Int] = [1,2,3,2,2,2,5,4,2]
+var search:SearchArray = SearchArray()
+var halfNum:Int? = search.moreThanHalfNum(arr: searchArr)
+if halfNum != nil {
+    print("FlyElephant--超过一半的数字---\(halfNum!)")
+}
 
+func getUserInfo() -> (Int,String) {
+    return (25,"FlyElephant")
+}
+
+let stuInfo = getUserInfo()
+
+print(stuInfo)
+
+let (code, name) = stuInfo
+print("编号: \(code)")
+
+print("名字: \(name)")
+
+let (stuCode, _) = stuInfo
+print("编号: \(stuCode)")
+
+print("编号: \(stuInfo.0)")
+print("名字: \(stuInfo.1)")
+
+let nextStuInfo = (stuCode: 27, stuName: "keso")
+print("编号: \(nextStuInfo.stuCode)")
+print("名字: \(nextStuInfo.stuName)")
 
 
 

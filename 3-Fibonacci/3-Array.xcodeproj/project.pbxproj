@@ -11,6 +11,7 @@
 		A824AAEF1DFFDE9600C05043 /* StackOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824AAEE1DFFDE9600C05043 /* StackOrder.swift */; };
 		A82C9F571DFED4BC007955AD /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C9F561DFED4BC007955AD /* Dimension.swift */; };
 		A82C9F591DFED526007955AD /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82C9F581DFED526007955AD /* Fibonacci.swift */; };
+		C574D9031E06A702006431B3 /* SearchArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D9021E06A702006431B3 /* SearchArray.swift */; };
 		C5E2DBE61D0C4C7E004AA024 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2DBE51D0C4C7E004AA024 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +32,8 @@
 		A824AAEE1DFFDE9600C05043 /* StackOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackOrder.swift; sourceTree = "<group>"; };
 		A82C9F561DFED4BC007955AD /* Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		A82C9F581DFED526007955AD /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
-		C5E2DBE21D0C4C7E004AA024 /* 3-Fibonacci */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "3-Fibonacci"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C574D9021E06A702006431B3 /* SearchArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchArray.swift; sourceTree = "<group>"; };
+		C5E2DBE21D0C4C7E004AA024 /* 3-Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "3-Array"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E2DBE51D0C4C7E004AA024 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +51,7 @@
 		C5E2DBD91D0C4C7E004AA024 = {
 			isa = PBXGroup;
 			children = (
-				C5E2DBE41D0C4C7E004AA024 /* 3-Fibonacci */,
+				C5E2DBE41D0C4C7E004AA024 /* 3-Array */,
 				C5E2DBE31D0C4C7E004AA024 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,12 +59,12 @@
 		C5E2DBE31D0C4C7E004AA024 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5E2DBE21D0C4C7E004AA024 /* 3-Fibonacci */,
+				C5E2DBE21D0C4C7E004AA024 /* 3-Array */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C5E2DBE41D0C4C7E004AA024 /* 3-Fibonacci */ = {
+		C5E2DBE41D0C4C7E004AA024 /* 3-Array */ = {
 			isa = PBXGroup;
 			children = (
 				C5E2DBE51D0C4C7E004AA024 /* main.swift */,
@@ -70,16 +72,18 @@
 				A82C9F581DFED526007955AD /* Fibonacci.swift */,
 				A824AAEC1DFFD5D600C05043 /* StackMin.swift */,
 				A824AAEE1DFFDE9600C05043 /* StackOrder.swift */,
+				C574D9021E06A702006431B3 /* SearchArray.swift */,
 			);
+			name = "3-Array";
 			path = "3-Fibonacci";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C5E2DBE11D0C4C7E004AA024 /* 3-Fibonacci */ = {
+		C5E2DBE11D0C4C7E004AA024 /* 3-Array */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C5E2DBE91D0C4C7E004AA024 /* Build configuration list for PBXNativeTarget "3-Fibonacci" */;
+			buildConfigurationList = C5E2DBE91D0C4C7E004AA024 /* Build configuration list for PBXNativeTarget "3-Array" */;
 			buildPhases = (
 				C5E2DBDE1D0C4C7E004AA024 /* Sources */,
 				C5E2DBDF1D0C4C7E004AA024 /* Frameworks */,
@@ -89,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = "3-Fibonacci";
+			name = "3-Array";
 			productName = "3-Fibonacci";
-			productReference = C5E2DBE21D0C4C7E004AA024 /* 3-Fibonacci */;
+			productReference = C5E2DBE21D0C4C7E004AA024 /* 3-Array */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C5E2DBDD1D0C4C7E004AA024 /* Build configuration list for PBXProject "3-Fibonacci" */;
+			buildConfigurationList = C5E2DBDD1D0C4C7E004AA024 /* Build configuration list for PBXProject "3-Array" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -122,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5E2DBE11D0C4C7E004AA024 /* 3-Fibonacci */,
+				C5E2DBE11D0C4C7E004AA024 /* 3-Array */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +141,7 @@
 				A82C9F591DFED526007955AD /* Fibonacci.swift in Sources */,
 				A824AAED1DFFD5D600C05043 /* StackMin.swift in Sources */,
 				A824AAEF1DFFDE9600C05043 /* StackOrder.swift in Sources */,
+				C574D9031E06A702006431B3 /* SearchArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +247,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C5E2DBDD1D0C4C7E004AA024 /* Build configuration list for PBXProject "3-Fibonacci" */ = {
+		C5E2DBDD1D0C4C7E004AA024 /* Build configuration list for PBXProject "3-Array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5E2DBE71D0C4C7E004AA024 /* Debug */,
@@ -251,7 +256,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5E2DBE91D0C4C7E004AA024 /* Build configuration list for PBXNativeTarget "3-Fibonacci" */ = {
+		C5E2DBE91D0C4C7E004AA024 /* Build configuration list for PBXNativeTarget "3-Array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5E2DBEA1D0C4C7E004AA024 /* Debug */,
