@@ -75,8 +75,8 @@
 				A85A8FF91D0D37EB0044FAAD /* StringExtension.swift */,
 				A89E95801D1156100003B255 /* ConstructBinaryTree.swift */,
 				A89E95821D1156870003B255 /* TreeNode.swift */,
-				C5159BFD1D1FB20600E34814 /* TreeOrder.swift */,
 				A82C9F511DFE7395007955AD /* TreeUtil.swift */,
+				C5159BFD1D1FB20600E34814 /* TreeOrder.swift */,
 				A82C9F541DFE9A09007955AD /* MirrorTree.swift */,
 				A8B5C0021E00F2C900E404FA /* BinarySearchTree.swift */,
 			);

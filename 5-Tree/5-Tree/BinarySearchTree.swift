@@ -9,9 +9,9 @@
 import Foundation
 
 class BinarySearchTree {
-//    二叉搜索树的后序遍历序列
-//    输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。
     
+//    二叉搜索树的后序遍历序列
+//    输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同.
      func verifyPostDataOfBST(arr:[Int]) -> Bool {
         if arr.count == 0 {
             return false
@@ -144,5 +144,34 @@ class BinarySearchTree {
         } else {
             return false
         }
+    }
+    
+//    二叉搜索树与双向链表
+//    输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向.
+    
+    var leftHead:TreeNode?
+    var rightHead:TreeNode?
+    func convertTwoWayList(rootNode:TreeNode?) -> TreeNode? {
+        convertSubList(rootNode: rootNode)
+        return leftHead
+    }
+    
+    func convertSubList(rootNode:TreeNode?) {
+        if rootNode == nil {
+            return
+        }
+        convertSubList(rootNode: rootNode?.leftChild)
+        
+        if rightHead == nil {
+            leftHead = rootNode
+            rightHead = rootNode
+        } else {
+            // 右节点和根节点双向指针  注意更新右节点
+            rightHead?.rightChild = rootNode
+            rootNode?.leftChild = rightHead
+            rightHead = rootNode
+        }
+        
+        convertSubList(rootNode: rootNode?.rightChild)
     }
 }
