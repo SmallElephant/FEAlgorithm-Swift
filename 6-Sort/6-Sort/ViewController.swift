@@ -15,6 +15,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
+        var minHeapData:[Int] = [16,7,3,20,17,8]
+        let heapSort:HeapSort = HeapSort()
+        
+        heapSort.heapSort(arr: &minHeapData)
+        
+        print("FlyElephant--小根堆结果---\(minHeapData)")
+        
+        var maxHeapData:[Int] = [16,7,3,20,17,8]
+        heapSort.heapMaxSort(arr: &maxHeapData)
+        print("FlyElephant--大根堆结果---\(maxHeapData)")
+        
         let data:[Int] = [1,2,3,2,4,8,9,10,19,0]
         let result = quickSort(data: data)
         print("方案1:-\(result)")
