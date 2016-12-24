@@ -11,4 +11,4 @@ import Foundation
 var maxSum:MaxSum = MaxSum()
 var arr:[Int] = [1,-2,3,10,-4,7,2,-5]
 var sum = maxSum.findGreatestSumOfSubArray(arr: arr)
-print("连续子数组最大的和--\(sum)")
+print("FlyElephant-连续子数组最大的和--\(sum)")
