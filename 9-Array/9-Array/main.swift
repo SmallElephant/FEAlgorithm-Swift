@@ -11,4 +11,59 @@ import Foundation
 var maxSum:MaxSum = MaxSum()
 var arr:[Int] = [1,-2,3,10,-4,7,2,-5]
 var sum = maxSum.findGreatestSumOfSubArray(arr: arr)
-print("FlyElephant-连续子数组最大的和--\(sum)")
+print("连续子数组最大的和--\(sum)")
+
+func countNumOfOne(num:Int) -> Int {
+    var n:Int = num
+    var count:Int = 0
+    while n > 0 {
+        if n%10 == 1 {
+            count += 1
+        }
+        n = n/10
+    }
+    return count
+}
+
+func isUglyNumber(num:Int) -> Bool {
+    var number:Int = num
+    while number%2 == 0 {
+        number = number/2
+    }
+    
+    while number%3 == 0 {
+        number = number/3
+    }
+    
+    while number%5 == 0 {
+        number = number/5
+    }
+    
+    return number == 1 ? true : false
+}
+
+var maxNumber = 2000
+
+var maxCount = maxSum.countOfNumber(num: maxNumber)
+print("第二种方式----\(maxCount)")
+
+var minSort:MinSort = MinSort()
+var data:[Int] = [8,9,12,34,567]
+minSort.printMinNumber(data: data)
+
+var uglyNumber:Int = 1
+var result:Bool = isUglyNumber(num: uglyNumber)
+print("\(uglyNumber)----\(result)")
+
+//var uglyNumber:Int = 31
+//var result:Int = minSort.findUglyNumber(index: 1500)
+//print("FlyElephant-最终的结果---\(result)")
+//for i in 1...15 {
+//    var result:Int = minSort.findUglyNumber(index: i)
+//    print("最终的结果---\(result)")
+//}
+
+
+
+
+
