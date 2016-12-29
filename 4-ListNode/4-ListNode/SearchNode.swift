@@ -120,4 +120,57 @@ class SearchNode {
         return mergeHead
     }
     
+    
+    func findFirstCommon(firstHead:ListNode?,nextHead:ListNode?) -> ListNode? {
+        if firstHead == nil || nextHead == nil {
+            return nil
+        }
+        var commonNode:ListNode?
+        
+        var firstlen:Int = listNodeLength(node: firstHead)
+        var nextlen:Int = listNodeLength(node: nextHead)
+        
+        var firstTempNode:ListNode? = firstHead
+        var nextTempNode:ListNode? = nextHead
+        
+        if firstlen > nextlen {
+            var gap:Int = firstlen - nextlen
+            var count:Int = 0
+            while firstTempNode != nil && count < gap {
+                count += 1
+                firstTempNode = firstTempNode?.next
+            }
+            
+        } else {
+            var gap:Int = nextlen - firstlen
+        }
+        
+        while firstTempNode != nil && nextTempNode != nil {
+            var value1:Int = firstTempNode!.value!
+            var value2:Int = nextTempNode!.value!
+            if value1 == value2 {
+                commonNode = firstTempNode
+                break
+            }
+            firstTempNode = firstTempNode?.next
+            nextTempNode = nextTempNode?.next
+        }
+        
+        
+        return commonNode
+    }
+    
+    func listNodeLength(node:ListNode?) -> Int {
+        if node == nil {
+            return 0
+        }
+        var count:Int = 0
+        var tempNode:ListNode? = node
+        while tempNode != nil {
+            count += 1
+            tempNode = tempNode?.next
+        }
+        return count
+    }
+    
 }

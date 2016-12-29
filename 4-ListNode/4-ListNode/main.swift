@@ -136,11 +136,35 @@ var pHead:RandomListNode? = randomHead
 var clone:RandomListClone = RandomListClone()
 clone.randomListNodeClone(headNode: &pHead)
 while pHead != nil {
-    print("FlyElephant-随机节点--\(pHead!.data)---👬--\(pHead!.sibling?.data)")
+    print("随机节点--\(pHead!.data)---👬--\(pHead!.sibling?.data)")
     pHead = pHead?.next
 }
 
 
+var firstSearchNode:ListNode?
+var firstSearchHead:ListNode?
+searchNode.createList(&firstSearchNode, data: 1)
+firstSearchHead = firstSearchNode
+
+searchNode.createList(&firstSearchNode, data: 2)
+searchNode.createList(&firstSearchNode, data: 3)
+searchNode.createList(&firstSearchNode, data: 6)
+searchNode.createList(&firstSearchNode, data: 7)
+
+//打印节点
+
+var nextSearchNode:ListNode?
+var nextSearchHead:ListNode?
+searchNode.createList(&nextSearchNode, data: 4)
+nextSearchHead = nextSearchNode
+
+searchNode.createList(&nextSearchNode, data: 5)
+searchNode.createList(&nextSearchNode, data: 6)
+searchNode.createList(&nextSearchNode, data: 7)
+
+searchNode.printList(nextSearchHead)
+
+searchNode.findFirstCommon(firstHead: firstSearchHead, nextHead: nextSearchHead)
 
 
 
