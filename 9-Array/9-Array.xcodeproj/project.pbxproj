@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A849BEF61E0D73A5006F7655 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A849BEF51E0D73A5006F7655 /* main.swift */; };
 		A849BEFD1E0D7453006F7655 /* MaxSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A849BEFC1E0D7453006F7655 /* MaxSum.swift */; };
+		A86E36A81E14F1B3007DEE4A /* ReversePairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E36A71E14F1B3007DEE4A /* ReversePairs.swift */; };
 		C57A3D511E0FDE1A00E05C27 /* MinSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A3D501E0FDE1A00E05C27 /* MinSort.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A849BEF21E0D73A5006F7655 /* 9-Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "9-Array"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A849BEF51E0D73A5006F7655 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A849BEFC1E0D7453006F7655 /* MaxSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxSum.swift; sourceTree = "<group>"; };
+		A86E36A71E14F1B3007DEE4A /* ReversePairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReversePairs.swift; sourceTree = "<group>"; };
 		C57A3D501E0FDE1A00E05C27 /* MinSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				A849BEF51E0D73A5006F7655 /* main.swift */,
 				A849BEFC1E0D7453006F7655 /* MaxSum.swift */,
 				C57A3D501E0FDE1A00E05C27 /* MinSort.swift */,
+				A86E36A71E14F1B3007DEE4A /* ReversePairs.swift */,
 			);
 			path = "9-Array";
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86E36A81E14F1B3007DEE4A /* ReversePairs.swift in Sources */,
 				A849BEFD1E0D7453006F7655 /* MaxSum.swift in Sources */,
 				A849BEF61E0D73A5006F7655 /* main.swift in Sources */,
 				C57A3D511E0FDE1A00E05C27 /* MinSort.swift in Sources */,

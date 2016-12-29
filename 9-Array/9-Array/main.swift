@@ -63,7 +63,10 @@ print("\(uglyNumber)----\(result)")
 //    print("最终的结果---\(result)")
 //}
 
-
+var reversePair:ReversePairs = ReversePairs()
+var sortData:[Int] = [7,5,6,4]
+var reverseCount:Int = reversePair.reversPairs(arr: &sortData, low: 0, high: sortData.count-1)
+print("FlyElephant-逆序对的数量---\(reverseCount)")
 
 
 
