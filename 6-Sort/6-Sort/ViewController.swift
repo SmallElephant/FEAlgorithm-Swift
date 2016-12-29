@@ -95,6 +95,13 @@ class ViewController: UIViewController {
         let maxDigit = MaxDigit()
         maxDigit.normalPrintMaxDigits(digitCount: 2)
 //        maxDigit.printMaxDigits(digitCount: 2)
+        
+        
+        let mergeSort:MergeSort = MergeSort()
+        var mergeSortData:[Int] = [1,10,2,4,3,9,9,5,6,8,7]
+        mergeSort.mergeSort(arr: &mergeSortData, low: 0, high: mergeSortData.count-1)
+        print("FlyElephant-归并排序之后的数组---\(mergeSortData)")
+        
     }
 
     override func didReceiveMemoryWarning() {
