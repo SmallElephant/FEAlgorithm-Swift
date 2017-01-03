@@ -127,14 +127,14 @@ class SearchNode {
         }
         var commonNode:ListNode?
         
-        var firstlen:Int = listNodeLength(node: firstHead)
-        var nextlen:Int = listNodeLength(node: nextHead)
+        let firstlen:Int = listNodeLength(node: firstHead)
+        let nextlen:Int = listNodeLength(node: nextHead)
         
         var firstTempNode:ListNode? = firstHead
         var nextTempNode:ListNode? = nextHead
-        
+         var gap:Int = 0
         if firstlen > nextlen {
-            var gap:Int = firstlen - nextlen
+            gap = firstlen - nextlen
             var count:Int = 0
             while firstTempNode != nil && count < gap {
                 count += 1
@@ -142,12 +142,12 @@ class SearchNode {
             }
             
         } else {
-            var gap:Int = nextlen - firstlen
+             gap = nextlen - firstlen
         }
         
         while firstTempNode != nil && nextTempNode != nil {
-            var value1:Int = firstTempNode!.value!
-            var value2:Int = nextTempNode!.value!
+            let value1:Int = firstTempNode!.value!
+            let value2:Int = nextTempNode!.value!
             if value1 == value2 {
                 commonNode = firstTempNode
                 break

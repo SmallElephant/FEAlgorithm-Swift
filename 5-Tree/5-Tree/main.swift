@@ -124,7 +124,7 @@ func convertNumberToHex(_ number:NSInteger)->String{
 //util.rootList = rootStr
 //util.createTreeByPreOrder(root: &preRootNode)
 //
-//var treeOrder:TreeOrder = TreeOrder()
+var treeOrder:TreeOrder = TreeOrder()
 //
 //var mirrorTree:MirrorTree = MirrorTree()
 //mirrorTree.mirrorTree(rootNode: &preRootNode)
@@ -238,15 +238,33 @@ func convertNumberToHex(_ number:NSInteger)->String{
 //preData = [8,10,4,9]
 
 
-var util:TreeUtil = TreeUtil()
-var rootData:[String] = ["10","5","4","#","#","7","#","#","12","#","#"]
-var preRootNode:TreeNode?
-util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
+//var util:TreeUtil = TreeUtil()
+//var rootData:[String] = ["10","5","4","#","#","7","#","#","12","#","#"]
+//var preRootNode:TreeNode?
+//util.createTreeByPreOrderData(root: &preRootNode, listData: rootData)
+//
+//var treePath:BinaryTreePath = BinaryTreePath()
+//var target = 22
+//var result = treePath.findTreePath(rootNode: preRootNode, targert: target)
+//print("FlyElephant-和\(target)的路径---\(result!)")
 
-var treePath:BinaryTreePath = BinaryTreePath()
-var target = 22
-var result = treePath.findTreePath(rootNode: preRootNode, targert: target)
-print("FlyElephant-和\(target)的路径---\(result!)")
+
+var util:TreeUtil = TreeUtil()
+var depthData:[String] = ["1","2","4","#","#","5","7","#","#","#","3","#","6","#","#"]
+var preRootNode:TreeNode?
+util.createTreeByPreOrderData(root: &preRootNode, listData: depthData)
+var binaryTreePath:BinaryTreePath = BinaryTreePath()
+var binaryDepth:Int = binaryTreePath.treeMaxDepth(rootNode: preRootNode)
+print("最大深度--\(binaryDepth)")
+
+var binaryMinDepth:Int = binaryTreePath.treeMinDepth(rootNode: preRootNode)
+print("最小深度--\(binaryMinDepth)")
+
+var isBalance:Bool = binaryTreePath.isBalanceTree(rootNode: preRootNode)
+print("FlyElephant-\(depthData)二叉平衡树--\(isBalance)")
+
+var isBalance2:Bool = binaryTreePath.isBalancedTree(rootNode: preRootNode)
+print("FlyElephant-\(depthData)二叉平衡树--\(isBalance2)")
 
 
 
