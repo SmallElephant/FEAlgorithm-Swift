@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8742CB81E0A242700EF30C9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742CB71E0A242700EF30C9 /* main.swift */; };
 		A8742D001E0A27A300EF30C9 /* SearchMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8742CFF1E0A27A300EF30C9 /* SearchMin.swift */; };
+		A8EAC01C1E1B4392005E1747 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EAC01B1E1B4392005E1747 /* BinarySearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		A8742CB41E0A242700EF30C9 /* 8-Search */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "8-Search"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8742CB71E0A242700EF30C9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A8742CFF1E0A27A300EF30C9 /* SearchMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMin.swift; sourceTree = "<group>"; };
+		A8EAC01B1E1B4392005E1747 /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				A8742CB71E0A242700EF30C9 /* main.swift */,
 				A8742CFF1E0A27A300EF30C9 /* SearchMin.swift */,
+				A8EAC01B1E1B4392005E1747 /* BinarySearch.swift */,
 			);
 			path = "8-Search";
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				A8742D001E0A27A300EF30C9 /* SearchMin.swift in Sources */,
 				A8742CB81E0A242700EF30C9 /* main.swift in Sources */,
+				A8EAC01C1E1B4392005E1747 /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +258,7 @@
 				A8742CBD1E0A242700EF30C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
