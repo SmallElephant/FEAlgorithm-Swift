@@ -63,10 +63,15 @@ print("\(uglyNumber)----\(result)")
 //    print("最终的结果---\(result)")
 //}
 
-var reversePair:ReversePairs = ReversePairs()
-var sortData:[Int] = [7,5,6,4]
-var reverseCount:Int = reversePair.reversPairs(arr: &sortData, low: 0, high: sortData.count-1)
-print("FlyElephant-逆序对的数量---\(reverseCount)")
+//var reversePair:ReversePairs = ReversePairs()
+//var sortData:[Int] = [7,5,6,4]
+//var reverseCount:Int = reversePair.reversPairs(arr: &sortData, low: 0, high: sortData.count-1)
+//print("FlyElephant-逆序对的数量---\(reverseCount)")
+var searchNumber:SearchNumber = SearchNumber()
 
-
+var searchIndex:Int = searchNumber.indexOfOne(num: 8)
+print("1的位置---\(searchIndex)")
+var searchArr:[Int] = [2,4,4,7,3,2,5,5]
+var searchResult:(Int,Int) = searchNumber.findNumberAppearOnce(arr: searchArr)
+print("\(searchArr)出现一次的两个数字---\(searchResult)")
 
