@@ -151,8 +151,6 @@ searchNode.createList(&firstSearchNode, data: 3)
 searchNode.createList(&firstSearchNode, data: 6)
 searchNode.createList(&firstSearchNode, data: 7)
 
-//打印节点
-
 var nextSearchNode:ListNode?
 var nextSearchHead:ListNode?
 searchNode.createList(&nextSearchNode, data: 4)
@@ -164,7 +162,13 @@ searchNode.createList(&nextSearchNode, data: 7)
 
 searchNode.printList(nextSearchHead)
 
-searchNode.findFirstCommon(firstHead: firstSearchHead, nextHead: nextSearchHead)
+var commonNode:ListNode? = searchNode.findFirstCommon(firstHead: firstSearchHead, nextHead: nextSearchHead)
+
+if commonNode == nil {
+    print("没有公共节点")
+} else {
+    print("第一个公共节点的值-\(commonNode!.value!)")
+}
 
 
 
