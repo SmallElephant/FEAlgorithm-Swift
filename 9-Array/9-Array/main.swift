@@ -90,9 +90,10 @@ if sumResult != nil {
 
 var sumSequenceArr:[[Int]]? = searchSum.findContinuousSequence(sum: 15)
 if sumSequenceArr != nil {
-    print("FlyElephant-连续正数序列数组--\(sumSequenceArr!)")
+    print("连续正数序列数组--\(sumSequenceArr!)")
 }
 
-
+var dices:Dices = Dices()
+dices.probility(diceCount: 2)
 
 
