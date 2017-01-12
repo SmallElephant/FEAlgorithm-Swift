@@ -94,6 +94,8 @@ if sumSequenceArr != nil {
 }
 
 var dices:Dices = Dices()
-dices.probility(diceCount: 2)
+dices.probility(diceCount: 3)
+
+dices.diceProbility(diceCount: 3)
 
 

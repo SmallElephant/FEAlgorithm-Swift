@@ -19,15 +19,9 @@ class Dices {
         let len:Int = maxValue - diceCount + 1
         var arr:[Int] = [Int].init(repeating: 0, count: len)
         probilityNumber(diceCount: diceCount, arr: &arr)
-//        for i in 0..<len {
-//            let result:Double = Double(arr[i]) / total
-//            print("\(i+diceCount)---出现的概率----\(result)")
-//        }
-        
-        print("arr的结果---\(arr)")
-        for i in diceCount...maxValue {
-            let result:Double = Double(arr[i - diceCount]) / total
-            print("\(i)---出现的概率----\(result)")
+        for i in 0..<len {
+            let result:Double = Double(arr[i]) / total
+            print("FlyElephant--\(i+diceCount)---出现的概率----\(result)")
         }
     }
     
@@ -44,9 +38,46 @@ class Dices {
             arr[sum - diceCount] = arr[sum - diceCount] + 1
         } else {
             for i in 1...6 {
-                baseProbilityNumber(diceCount: diceCount, remainderDice: diceCount - 1, sum: sum + i, arr: &arr)
+                baseProbilityNumber(diceCount: diceCount, remainderDice: remainderDice - 1, sum: sum + i, arr: &arr)
             }
         }
+    }
+    
+    
+    func diceProbility(diceCount:Int) {
+        var arr:[[Int]] = []
+        let maxLen:Int = 6 * diceCount + 1
+        let first:[Int] = [Int].init(repeating: 0, count: maxLen)
+        let next:[Int] = [Int].init(repeating: 0, count: maxLen)
+        arr.append(first)
+        arr.append(next)
+        
+        var flag:Int = 0
+        for i in 1...6 {
+            arr[flag][i] = 1
+        }
+        
+        
+        for i in 2...diceCount {
+            for j in 0..<i {
+                arr[1-flag][j] = 0
+            }
+            for k in i...6 * i {
+                var m:Int = 1
+                arr[1-flag][k] = 0
+                while m <= k && m <= 6 {
+                    arr[1-flag][k] += arr[flag][k-m]
+                    m += 1
+                }
+            }
+            flag = 1 - flag
+        }
+        let total:Double = pow(6.0, Double(diceCount))
+        for i in diceCount...6 * diceCount {
+            let rate:Double = Double(arr[flag][i])/total
+            print("FlyElephant--\(i)出现的概率---\(rate)")
+        }
+        
     }
     
 }
