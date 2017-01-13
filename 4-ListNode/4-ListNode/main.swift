@@ -171,6 +171,12 @@ if commonNode == nil {
 }
 
 
+var josephList:JosephList = JosephList()
+var josephHeadNode:ListNode? = josephList.createList(number: 5)
+josephList.printList(headNode: josephHeadNode!, number: 5)
+
+
+
 
 
 

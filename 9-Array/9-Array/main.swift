@@ -109,4 +109,10 @@ if playResult {
 }
 
 
+var joseph:Joseph = Joseph()
+var last:Int = joseph.lastNumber(n: 5, m: 3)
+
+var normalLast:Int = joseph.normalLastNumber(n: 5, m: 3)
+print("FlyElephant-最后的数字----\(last)---\(normalLast)")
+
 
