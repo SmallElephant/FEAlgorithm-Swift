@@ -13,6 +13,7 @@
 		A88048DE1E1BC155008BA46F /* SearchNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88048DD1E1BC155008BA46F /* SearchNumber.swift */; };
 		A88048E01E1BD354008BA46F /* SearchSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88048DF1E1BD354008BA46F /* SearchSum.swift */; };
 		A8CA93C11E264AA200F2E4F5 /* Dices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA93C01E264AA200F2E4F5 /* Dices.swift */; };
+		A8E6F0AC1E28B72200EBD082 /* PlayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6F0AB1E28B72200EBD082 /* PlayCard.swift */; };
 		C57A3D511E0FDE1A00E05C27 /* MinSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A3D501E0FDE1A00E05C27 /* MinSort.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		A88048DD1E1BC155008BA46F /* SearchNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNumber.swift; sourceTree = "<group>"; };
 		A88048DF1E1BD354008BA46F /* SearchSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSum.swift; sourceTree = "<group>"; };
 		A8CA93C01E264AA200F2E4F5 /* Dices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dices.swift; sourceTree = "<group>"; };
+		A8E6F0AB1E28B72200EBD082 /* PlayCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayCard.swift; sourceTree = "<group>"; };
 		C57A3D501E0FDE1A00E05C27 /* MinSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				A88048DD1E1BC155008BA46F /* SearchNumber.swift */,
 				A88048DF1E1BD354008BA46F /* SearchSum.swift */,
 				A8CA93C01E264AA200F2E4F5 /* Dices.swift */,
+				A8E6F0AB1E28B72200EBD082 /* PlayCard.swift */,
 			);
 			path = "9-Array";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86E36A81E14F1B3007DEE4A /* ReversePairs.swift in Sources */,
+				A8E6F0AC1E28B72200EBD082 /* PlayCard.swift in Sources */,
 				A8CA93C11E264AA200F2E4F5 /* Dices.swift in Sources */,
 				A849BEFD1E0D7453006F7655 /* MaxSum.swift in Sources */,
 				A88048DE1E1BC155008BA46F /* SearchNumber.swift in Sources */,

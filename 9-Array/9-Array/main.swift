@@ -95,7 +95,18 @@ if sumSequenceArr != nil {
 
 var dices:Dices = Dices()
 dices.probility(diceCount: 3)
-
 dices.diceProbility(diceCount: 3)
+
+
+
+var playCard:PlayCard = PlayCard()
+var playArr:[Int] = [1,0,0,6,5]
+var playResult:Bool = playCard.isContinuous(arr: playArr)
+if playResult {
+    print("FlyElephant-\(playArr)是顺子")
+} else {
+    print("FlyElephant-\(playArr)不是顺子")
+}
+
 
 

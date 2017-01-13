@@ -77,7 +77,6 @@ class Dices {
             let rate:Double = Double(arr[flag][i])/total
             print("FlyElephant--\(i)出现的概率---\(rate)")
         }
-        
     }
     
 }
