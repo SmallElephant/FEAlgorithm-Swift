@@ -33,3 +33,11 @@ print("FlyElephant-去除重复之后的字符串---\(simple)")
 
 var isAnagram:Bool = hashSearch.isAnagram(first: "abca", next: "baccccc")
 print("FlyElephant-是否是变位词---\(isAnagram)")
+
+var convert:Convert = Convert()
+var convertResult:Int? = convert.stringToInt(str: "-9987334")
+if convertResult != nil {
+    print("FlyElephant--转换结果---||\(convertResult!)")
+} else {
+    print("参数非法")
+}

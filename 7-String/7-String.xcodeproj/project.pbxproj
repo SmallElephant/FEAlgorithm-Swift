@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8A124921E29C4EB00D8ED47 /* Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A124911E29C4EB00D8ED47 /* Convert.swift */; };
 		A8F3F50E1E11564B00BB68EF /* HashSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F3F50D1E11564B00BB68EF /* HashSearch.swift */; };
 		C574D8F81E062EE7006431B3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D8F71E062EE7006431B3 /* main.swift */; };
 		C574D8FF1E065858006431B3 /* Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D8FE1E065858006431B3 /* Permutation.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A8A124911E29C4EB00D8ED47 /* Convert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convert.swift; sourceTree = "<group>"; };
 		A8F3F50D1E11564B00BB68EF /* HashSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashSearch.swift; sourceTree = "<group>"; };
 		C574D8F41E062EE7006431B3 /* 7-String */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "7-String"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C574D8F71E062EE7006431B3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				C574D8FE1E065858006431B3 /* Permutation.swift */,
 				C574D9001E068A4D006431B3 /* StringExtension.swift */,
 				A8F3F50D1E11564B00BB68EF /* HashSearch.swift */,
+				A8A124911E29C4EB00D8ED47 /* Convert.swift */,
 			);
 			path = "7-String";
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C574D8FF1E065858006431B3 /* Permutation.swift in Sources */,
+				A8A124921E29C4EB00D8ED47 /* Convert.swift in Sources */,
 				A8F3F50E1E11564B00BB68EF /* HashSearch.swift in Sources */,
 				C574D8F81E062EE7006431B3 /* main.swift in Sources */,
 				C574D9011E068A4D006431B3 /* StringExtension.swift in Sources */,
