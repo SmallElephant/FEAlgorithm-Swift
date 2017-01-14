@@ -27,5 +27,17 @@ class Sum {
       //var sum:Int = 0;
       //n == 0 || (sum = n + sumNumber(n - 1))
       //return sum
+    //不用加减乘除做加法
+    //题目:写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号.
+    func add(num1:Int,num2:Int) -> Int {
+        var a:Int = num1
+        var b:Int = num2
+        while b != 0 {
+            let temp:Int = a ^ b
+            b = (a & b) << 1
+            a = temp
+        }
+        return a
+    }
     
 }

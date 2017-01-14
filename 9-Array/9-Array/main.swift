@@ -116,9 +116,12 @@ var normalLast:Int = joseph.normalLastNumber(n: 5, m: 3)
 print("FlyElephant-最后的数字----\(last)---\(normalLast)")
 
 var speSum:Sum = Sum()
-var speMax:Int = 3
+var speMax:Int = 100
 var speResult:Int = speSum.sumNumber(n: speMax)
 print("1+..+\(speMax)和---\(speResult)")
 
+
+var sumAddResult:Int = speSum.add(num1: 5, num2: 17)
+print("FlyElephant-相加的结果---\(sumAddResult)")
 
 
