@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        bubbleSort()
+        
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
         let heapSort:HeapSort = HeapSort()
@@ -298,6 +300,13 @@ class ViewController: UIViewController {
         quickSort(data: &data, low: sortIndex+1, high: high)
     }
 
+    // 冒泡排序
+    func bubbleSort() {
+        var bubbleArr:[Int] = [1,3,7,2,4,1,0]
+        let bubbleSort:BubbleSort = BubbleSort()
+        bubbleSort.bubbleSort3(arr: &bubbleArr)
+        print("冒泡排序之后的数组---\(bubbleArr)")
+    }
 
 }
 
