@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         
         bubbleSort()
         selectSort()
+        insertSort()
         
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
@@ -323,6 +324,15 @@ class ViewController: UIViewController {
         let selectSort:SelectSort = SelectSort()
         selectSort.sort(arr: &arr)
         print("选择排序---\(arr)")
+    }
+    
+    // 插入排序
+    func insertSort() {
+        var arr:[Int] = [9,7,6,5,1,2,0]
+        let inserSort:InsertionSort = InsertionSort()
+        inserSort.sort(arr: &arr)
+        print("插入排序---\(arr)")
+
     }
 
 }
