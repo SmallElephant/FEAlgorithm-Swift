@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         bubbleSort()
+        selectSort()
         
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
@@ -304,8 +305,24 @@ class ViewController: UIViewController {
     func bubbleSort() {
         var bubbleArr:[Int] = [1,3,7,2,4,1,0]
         let bubbleSort:BubbleSort = BubbleSort()
-        bubbleSort.bubbleSort3(arr: &bubbleArr)
-        print("冒泡排序之后的数组---\(bubbleArr)")
+        bubbleSort.bubbleSort(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+        
+        bubbleArr = [1,3,7,2,4,1,0]
+        bubbleSort.bubbleSort1(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+        
+        bubbleArr = [1,3,7,2,4,1,0]
+        bubbleSort.bubbleSort2(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+    }
+    
+    // 选择排序
+    func selectSort() {
+        var arr:[Int] = [10,2,5,7,3,1,0]
+        let selectSort:SelectSort = SelectSort()
+        selectSort.sort(arr: &arr)
+        print("选择排序---\(arr)")
     }
 
 }

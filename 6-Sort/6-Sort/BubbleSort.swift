@@ -22,7 +22,7 @@ class BubbleSort {
         }
     }
     
-    func bubbleSort2(arr:inout [Int]) {
+    func bubbleSort1(arr:inout [Int]) {
         let count:Int = arr.count
         for i in 0..<count {
             let max:Int = count - i - 1
@@ -34,7 +34,7 @@ class BubbleSort {
         }
     }
     
-    func bubbleSort3(arr:inout [Int]) {
+    func bubbleSort2(arr:inout [Int]) {
         let count:Int = arr.count
         for i in (0..<count).reversed() {
             for j in 0..<i {
