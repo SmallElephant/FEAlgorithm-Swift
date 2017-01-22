@@ -13,14 +13,13 @@ class InsertionSort {
     func sort(arr:inout [Int]) {
         let count:Int = arr.count
         
-        for i in 0..<count {
-            for j in 0..<i {
-                if arr[j] > arr[j+1] {
-                    swap(&arr[j], &arr[j+1])
+        for i in 1..<count { //注意起始位置
+            for j in (1...i).reversed() {
+                if arr[j] < arr[j-1] {
+                    swap(&arr[j], &arr[j-1])
                 }
             }
         }
-        
     }
     
 }
