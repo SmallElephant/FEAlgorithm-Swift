@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         insertSort()
         shellSort()
         mergeSort()
-        qucikSort()
+        quickSort()
+        bucketSort()
         
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
@@ -316,11 +317,19 @@ class ViewController: UIViewController {
     }
     
     // 快速排序
-    func qucikSort() {
+    func quickSort() {
         let quickSort:QuickSort = QuickSort()
         var arr:[Int] = [1,2,4,3,9,9,5,6,8,7]
         quickSort.quickSort(arr: &arr, low: 0, high: arr.count - 1)
         print("FlyElephant--快速排序---\(arr)")
+    }
+    
+    // 桶排序
+    func bucketSort() {
+        let bucketSort:BucketSort = BucketSort()
+        var arr:[Int] = [-10, -9, -20, 29, 25, 3, 49, 9, 37, 21, 43]
+        bucketSort.sort(arr: &arr, min: -20, max: 50, gap: 10)
+        print("FlyElephant--桶排序---\(arr)")
     }
 
 }
