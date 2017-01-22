@@ -38,10 +38,6 @@ class ViewController: UIViewController {
         let result = quickSort(data: data)
         print("方案1:-\(result)")
         
-        var arr:[Int] = [10,3,17,8,5,2,1,9,5,4]
-        quickSort(data: &arr, low: 0, high: arr.count-1)
-        print("方案2:-\(arr)")
-        
         let roateArr:[Int] = [3,4,5,1,2]
         let roateResult:Int? = self.minOfRoateArr(arr: roateArr)
         if let minResult = roateResult {
