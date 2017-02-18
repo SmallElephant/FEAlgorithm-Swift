@@ -91,4 +91,28 @@ class BinarySearch {
         }
         return nil
     }
+    
+    //在一个已经排序的Int数组中，查找某个number，如果存在这个number，返回在数组的位置，反之返回-1
+    func binarySearch(arr:[Int],num:Int) -> Int {
+        if arr.count == 0 {
+            return -1
+        }
+        
+        var low:Int = 0
+        var high:Int = arr.count - 1
+        
+        while low <= high {
+            let mid:Int = (low + high) / 2
+            
+            if num < arr[mid] {
+                high = mid - 1
+            } else if (num > arr[mid]) {
+                low = mid + 1
+            } else {
+                return mid
+            }
+        }
+        return -1
+        
+    }
 }

@@ -11,6 +11,7 @@
 		C574D8F81E062EE7006431B3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D8F71E062EE7006431B3 /* main.swift */; };
 		C574D8FF1E065858006431B3 /* Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D8FE1E065858006431B3 /* Permutation.swift */; };
 		C574D9011E068A4D006431B3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D9001E068A4D006431B3 /* StringExtension.swift */; };
+		C57A3D551E2218EB00E05C27 /* ReverseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A3D541E2218EB00E05C27 /* ReverseString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		C574D8F71E062EE7006431B3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C574D8FE1E065858006431B3 /* Permutation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permutation.swift; sourceTree = "<group>"; };
 		C574D9001E068A4D006431B3 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C57A3D541E2218EB00E05C27 /* ReverseString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				C574D8FE1E065858006431B3 /* Permutation.swift */,
 				C574D9001E068A4D006431B3 /* StringExtension.swift */,
 				A8F3F50D1E11564B00BB68EF /* HashSearch.swift */,
+				C57A3D541E2218EB00E05C27 /* ReverseString.swift */,
 			);
 			path = "7-String";
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57A3D551E2218EB00E05C27 /* ReverseString.swift in Sources */,
 				C574D8FF1E065858006431B3 /* Permutation.swift in Sources */,
 				A8F3F50E1E11564B00BB68EF /* HashSearch.swift in Sources */,
 				C574D8F81E062EE7006431B3 /* main.swift in Sources */,
