@@ -90,9 +90,38 @@ if sumResult != nil {
 
 var sumSequenceArr:[[Int]]? = searchSum.findContinuousSequence(sum: 15)
 if sumSequenceArr != nil {
-    print("FlyElephant-连续正数序列数组--\(sumSequenceArr!)")
+    print("连续正数序列数组--\(sumSequenceArr!)")
+}
+
+var dices:Dices = Dices()
+dices.probility(diceCount: 3)
+dices.diceProbility(diceCount: 3)
+
+
+
+var playCard:PlayCard = PlayCard()
+var playArr:[Int] = [1,0,0,6,5]
+var playResult:Bool = playCard.isContinuous(arr: playArr)
+if playResult {
+    print("FlyElephant-\(playArr)是顺子")
+} else {
+    print("FlyElephant-\(playArr)不是顺子")
 }
 
 
+var joseph:Joseph = Joseph()
+var last:Int = joseph.lastNumber(n: 5, m: 3)
+
+var normalLast:Int = joseph.normalLastNumber(n: 5, m: 3)
+print("FlyElephant-最后的数字----\(last)---\(normalLast)")
+
+var speSum:Sum = Sum()
+var speMax:Int = 100
+var speResult:Int = speSum.sumNumber(n: speMax)
+print("1+..+\(speMax)和---\(speResult)")
+
+
+var sumAddResult:Int = speSum.add(num1: 5, num2: 17)
+print("FlyElephant-相加的结果---\(sumAddResult)")
 
 

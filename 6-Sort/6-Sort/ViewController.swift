@@ -15,6 +15,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        bubbleSort()
+        selectSort()
+        insertSort()
+        shellSort()
+        mergeSort()
+        quickSort()
+        bucketSort()
+        
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
         let heapSort:HeapSort = HeapSort()
@@ -30,10 +38,6 @@ class ViewController: UIViewController {
         let data:[Int] = [1,2,3,2,4,8,9,10,19,0]
         let result = quickSort(data: data)
         print("方案1:-\(result)")
-        
-        var arr:[Int] = [10,3,17,8,5,2,1,9,5,4]
-        quickSort(data: &arr, low: 0, high: arr.count-1)
-        print("方案2:-\(arr)")
         
         let roateArr:[Int] = [3,4,5,1,2]
         let roateResult:Int? = self.minOfRoateArr(arr: roateArr)
@@ -95,13 +99,6 @@ class ViewController: UIViewController {
         let maxDigit = MaxDigit()
         maxDigit.normalPrintMaxDigits(digitCount: 2)
 //        maxDigit.printMaxDigits(digitCount: 2)
-        
-        
-        let mergeSort:MergeSort = MergeSort()
-        var mergeSortData:[Int] = [1,10,2,4,3,9,9,5,6,8,7]
-        mergeSort.mergeSort(arr: &mergeSortData, low: 0, high: mergeSortData.count-1)
-        print("FlyElephant-归并排序之后的数组---\(mergeSortData)")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -269,35 +266,71 @@ class ViewController: UIViewController {
         result.append(contentsOf: rightResult)
         return result
     }
-    
-    func partition( data:inout [Int],low:Int,high:Int) -> Int {
-        
-        let root = data[high]
-        var index = low
-        for i in low...high {
-            if data[i] < root {
-                if i != index {
-                    swap(&data[i], &data[index])
-                }
-                index = index+1
-            }
-        }
-        
-        if high != index {
-            swap(&data[high], &data[index])
-        }
-        return index
-    }
-    
-    func quickSort(data:inout [Int],low:Int,high:Int) -> Void {
-        if low > high {
-            return
-        }
-        let sortIndex = partition(data: &data, low: low, high: high)
-        quickSort(data: &data, low: low, high: sortIndex-1)
-        quickSort(data: &data, low: sortIndex+1, high: high)
-    }
 
+
+    // 冒泡排序
+    func bubbleSort() {
+        var bubbleArr:[Int] = [1,3,7,2,4,1,0]
+        let bubbleSort:BubbleSort = BubbleSort()
+        bubbleSort.bubbleSort(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+        
+        bubbleArr = [1,3,7,2,4,1,0]
+        bubbleSort.bubbleSort1(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+        
+        bubbleArr = [1,3,7,2,4,1,0]
+        bubbleSort.bubbleSort2(arr: &bubbleArr)
+        print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+    }
+    
+    // 选择排序
+    func selectSort() {
+        var arr:[Int] = [10,2,5,7,3,1,0]
+        let selectSort:SelectSort = SelectSort()
+        selectSort.sort(arr: &arr)
+        print("选择排序---\(arr)")
+    }
+    
+    // 插入排序
+    func insertSort() {
+        var arr:[Int] = [9,7,6,5,1,2,0]
+        let inserSort:InsertionSort = InsertionSort()
+        inserSort.sort(arr: &arr)
+        print("FlyElephant-插入排序---\(arr)")
+    }
+    
+    // 希尔排序
+    func shellSort() {
+        var arr:[Int] = [10,8,1,5,3,4,9,0,7,11]
+        let shellSort:ShellSort = ShellSort()
+        shellSort.sort(arr: &arr)
+        print("FlyElephant-希尔排序---\(arr)")
+    }
+    
+    // 归并排序
+    func mergeSort() {
+        let mergeSort:MergeSort = MergeSort()
+        var mergeSortData:[Int] = [1,10,2,4,3,9,9,5,6,8,7]
+        mergeSort.mergeSort(arr: &mergeSortData, low: 0, high:mergeSortData.count-1 )
+        print("FlyElephant-归并排序---\(mergeSortData)")
+    }
+    
+    // 快速排序
+    func quickSort() {
+        let quickSort:QuickSort = QuickSort()
+        var arr:[Int] = [1,2,4,3,9,9,5,6,8,7]
+        quickSort.quickSort(arr: &arr, low: 0, high: arr.count - 1)
+        print("FlyElephant--快速排序---\(arr)")
+    }
+    
+    // 桶排序
+    func bucketSort() {
+        let bucketSort:BucketSort = BucketSort()
+        var arr:[Int] = [-10, -9, -20, 29, 25, 3, 49, 9, 37, 21, 43]
+        bucketSort.sort(arr: &arr, min: -20, max: 50, gap: 10)
+        print("FlyElephant--桶排序---\(arr)")
+    }
 
 }
 
