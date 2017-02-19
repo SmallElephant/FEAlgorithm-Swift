@@ -45,4 +45,16 @@ class BubbleSort {
         }
     }
     
+    func bubbleSortString(arr:inout [String]) {
+        let count:Int = arr.count
+        for i in 0..<count {
+            let max:Int = count - i - 1
+            for j in 0..<max {
+                if arr[j] > arr[j+1] {
+                    swap(&arr[j], &arr[j+1])
+                }
+            }
+        }
+    }
+    
 }

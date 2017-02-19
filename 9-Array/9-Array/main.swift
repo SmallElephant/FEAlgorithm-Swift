@@ -125,3 +125,7 @@ var sumAddResult:Int = speSum.add(num1: 5, num2: 17)
 print("FlyElephant-相加的结果---\(sumAddResult)")
 
 
+var chess:Chess = Chess()
+chess.printResult()
+
+
