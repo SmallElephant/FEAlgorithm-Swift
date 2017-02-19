@@ -9,14 +9,14 @@
 import Foundation
 
 var content="FlyElephant"
-var index=content.startIndex.advancedBy(10)
+var index=content.characters.index(content.startIndex, offsetBy: 10)
 
 print("\(content[index])---\(index)")
 
-var arr=[AnyObject](count: 100, repeatedValue:NSNull())
+var arr=[AnyObject](repeating: NSNull(), count: 100)
 var arrContent="My name is FlyElephant"
 for index in 0...arrContent.characters.count-1 {
-    var chIndex=arrContent.characters.startIndex.advancedBy(index)
+    var chIndex=arrContent.characters.index(arrContent.characters.startIndex, offsetBy: index)
     arr[index] = String(arrContent.characters[chIndex])
 }
 print("FlyElephant")

@@ -10,7 +10,7 @@ import Foundation
 
 class ReplaceSpace: NSObject {
     
-    func replaceSpace(inout data: Array<AnyObject>,originalContent:String)->Bool{
+    func replaceSpace(_ data: inout Array<AnyObject>,originalContent:String)->Bool{
         if data.count==0 {
             return false
         }
@@ -28,14 +28,14 @@ class ReplaceSpace: NSObject {
         while moveIndex>=0 && endIndex>moveIndex {
             //遇到空格替换
             if data[moveIndex] as? String==" " {
-                data[endIndex--]="0"
-                data[endIndex--]="2"
-                data[endIndex--]="%"
+                data[endIndex--]="0" as AnyObject
+                data[endIndex--]="2" as AnyObject
+                data[endIndex--]="%" as AnyObject
             }else{
                 //非空格moveIndex从后向前移动
                 data[endIndex--]=data[moveIndex]
             }
-            moveIndex--
+            moveIndex -= 1
         }
         
         return true
