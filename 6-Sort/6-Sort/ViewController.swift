@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         mergeSort()
         quickSort()
         bucketSort()
+        radixSort()
+        cocktailSort()
+        bogoSort()
+        
+        let random:Int = Int(arc4random_uniform(3)) // 6
+        print("随机数字----\(random)")
         
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
@@ -330,6 +336,32 @@ class ViewController: UIViewController {
         var arr:[Int] = [-10, -9, -20, 29, 25, 3, 49, 9, 37, 21, 43]
         bucketSort.sort(arr: &arr, min: -20, max: 50, gap: 10)
         print("FlyElephant--桶排序---\(arr)")
+    }
+    
+    // 基数排序
+    func radixSort() {
+        let radixSort:RadixSort = RadixSort()
+        var arr:[Int] = [73, 22, 93, 43, 55, 14, 28, 65, 39, 81, 725]
+        radixSort.sort(arr: &arr)
+        print("FlyElephant---基数排序---\(arr)")
+    }
+    
+    // 鸡尾酒排序
+    
+    func cocktailSort() {
+        let cocktailSort:CocktailSort = CocktailSort()
+        var arr:[Int] = [110, 9, 8, 1, 5, 4, 3, 2, 6, 7]
+        cocktailSort.sort(arr: &arr)
+        print("FlyElephant---鸡尾酒排序---\(arr)")
+    }
+    
+    // 猴子排序
+    
+    func bogoSort() {
+        let bogoSort:BogoSort = BogoSort()
+        var arr:[Int] = [2, 1]
+        bogoSort.sort(arr: &arr)
+        print("FlyElephant---猴子排序---\(arr)")
     }
 
 }
