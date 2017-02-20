@@ -8,7 +8,7 @@
 
 import Foundation
 
-var values:[Int] = [0, 60, 100, 120]
+var values:[Int] = [0, 60, 100, 120] //为了理解第0个设置为0
 
 var weights:[Int] = [0, 10, 20, 30]
 
@@ -22,13 +22,10 @@ var bag:Bag = Bag.init(maxW: max, value: values , weight: weights)
 
 var maxValue = bag.solveMaxValue()
 
-print("最大的值----\(maxValue)")
-
-bag.printResult()
+print("FlyElephant---01背包最大的值----\(maxValue)")
 
 var maxValue2 = bag.solveMaxValue2()
-print("最大值为---\(maxValue2)")
-bag.printResult2()
+print("Fylephant---01背包最大值为---\(maxValue2)")
 
 var maxValue3 = bag.solveMaxValue3()
-print("最大值为---\(maxValue3)")
+print("FlyElephant---完全背包最大值为---\(maxValue3)")

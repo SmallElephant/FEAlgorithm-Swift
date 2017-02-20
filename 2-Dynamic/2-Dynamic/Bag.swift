@@ -24,10 +24,10 @@ class Bag {
         let temp:[Int] = [Int].init(repeating: 0, count: maxWeight + 1)
         calculate = [[Int]].init(repeating: temp, count: values.count)
     }
-//    http://shmilyaw-hotmail-com.iteye.com/blog/2009761
+
     func solveMaxValue()->Int {
         
-        for i in 1..<values.count {
+        for i in 1..<values.count { // 注意起始位置
             for j in 1...maxWeight {
                 if weights[i] <= j {
                     calculate[i][j] = maxCompare(a: values[i] + calculate[i - 1][j - weights[i]], b: calculate[i-1][j])
