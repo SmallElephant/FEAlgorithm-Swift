@@ -17,6 +17,7 @@
 		A8E6F0AE1E28C60500EBD082 /* Joseph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6F0AD1E28C60500EBD082 /* Joseph.swift */; };
 		A8E6F0B21E28FF0400EBD082 /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6F0B11E28FF0400EBD082 /* Sum.swift */; };
 		A8E6F0B41E29052B00EBD082 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6F0B31E29052B00EBD082 /* Extension.swift */; };
+		C50918B71E594896004D3DE4 /* Chess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50918B61E594896004D3DE4 /* Chess.swift */; };
 		C57A3D511E0FDE1A00E05C27 /* MinSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57A3D501E0FDE1A00E05C27 /* MinSort.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		A8E6F0AD1E28C60500EBD082 /* Joseph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joseph.swift; sourceTree = "<group>"; };
 		A8E6F0B11E28FF0400EBD082 /* Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
 		A8E6F0B31E29052B00EBD082 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C50918B61E594896004D3DE4 /* Chess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chess.swift; sourceTree = "<group>"; };
 		C57A3D501E0FDE1A00E05C27 /* MinSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinSort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				A8E6F0AD1E28C60500EBD082 /* Joseph.swift */,
 				A8E6F0B11E28FF0400EBD082 /* Sum.swift */,
 				A8E6F0B31E29052B00EBD082 /* Extension.swift */,
+				C50918B61E594896004D3DE4 /* Chess.swift */,
 			);
 			path = "9-Array";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50918B71E594896004D3DE4 /* Chess.swift in Sources */,
 				A86E36A81E14F1B3007DEE4A /* ReversePairs.swift in Sources */,
 				A8E6F0AC1E28B72200EBD082 /* PlayCard.swift in Sources */,
 				A8CA93C11E264AA200F2E4F5 /* Dices.swift in Sources */,

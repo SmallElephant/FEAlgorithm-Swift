@@ -38,3 +38,8 @@ if sortCount == nil {
 }
 
 
+var searchData:[Int] = [10,11,12,13,14,15,16,17,18,19,20]
+var index:Int = binarySearch.binarySearch(arr: searchData, num: 15)
+print("15在数组\(searchData)中的索引\(index)")
+
+

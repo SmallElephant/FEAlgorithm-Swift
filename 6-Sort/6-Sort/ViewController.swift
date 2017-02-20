@@ -29,6 +29,13 @@ class ViewController: UIViewController {
         let random:Int = Int(arc4random_uniform(3)) // 6
         print("随机数字----\(random)")
         
+        
+        
+        let adjustSort:AdjustSort = AdjustSort()
+        var adjustData:[Int] = [-10,-8,0,-6,1,2,3,4-1,-2,6]
+        adjustSort.adjustSort(arr: &adjustData)
+        print("排序之后的数据----\(adjustData)")
+        
         //var heapData:[Int] = [1, 3, 4, 5, 2, 6, 9, 7, 8, 0]
         var minHeapData:[Int] = [16,7,3,20,17,8]
         let heapSort:HeapSort = HeapSort()
@@ -98,9 +105,6 @@ class ViewController: UIViewController {
         print("计算结果:\(power.power(base: 2, exponent: 3))")
         print("计算结果:\(power.power(base: 1.2, exponent: 2))")
         
-        
-        //let digitCount:Int = 2
-//        self.printMaxDigits(digitCount: 3)
         
         let maxDigit = MaxDigit()
         maxDigit.normalPrintMaxDigits(digitCount: 2)
@@ -288,6 +292,10 @@ class ViewController: UIViewController {
         bubbleArr = [1,3,7,2,4,1,0]
         bubbleSort.bubbleSort2(arr: &bubbleArr)
         print("FlyElephant-冒泡排序之后的数组---\(bubbleArr)")
+        
+        var strData:[String] = ["12,bob","3,sky","6,cool","1,good","22,go"]
+        bubbleSort.bubbleSortString(arr: &strData)
+        print("字符串冒泡排序之后的对比---\(strData)")
     }
     
     // 选择排序
