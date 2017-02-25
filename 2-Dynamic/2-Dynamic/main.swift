@@ -14,3 +14,11 @@ var maxValue = bag.solveMaxValue()
 
 print("最大的值----\(maxValue)")
 
+var personFloor:[Int] = [0 ,2 , 3, 5, 10, 8, 6]
+var elevator:Elevator = Elevator()
+var result = elevator.compute(person: personFloor, maxFloor: 6)
+print("走的最小的路层--\(result.0)--最佳楼层---\(result.1)")
+
+var result2 = elevator.compute2(person: personFloor, maxFloor: 6)
+print("走的最小的路层--\(result2.0)--最佳楼层---\(result2.1)")
+
