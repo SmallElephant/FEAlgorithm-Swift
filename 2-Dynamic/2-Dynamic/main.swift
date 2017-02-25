@@ -8,12 +8,27 @@
 
 import Foundation
 
-var bag:Bag = Bag.init(max: 50, value:  [0, 60, 100, 120], weight: [0, 10, 20, 30])
+var values:[Int] = [0, 60, 100, 120] //为了理解第0个设置为0
+
+var weights:[Int] = [0, 10, 20, 30]
+
+values = [0,6,3,5,4,6]
+
+weights = [0,2,2,6,5,4]
+
+var max:Int = 10
+
+var bag:Bag = Bag.init(maxW: max, value: values , weight: weights)
 
 var maxValue = bag.solveMaxValue()
 
-print("最大的值----\(maxValue)")
+print("FlyElephant---01背包最大的值----\(maxValue)")
 
+var maxValue2 = bag.solveMaxValue2()
+print("Fylephant---01背包最大值为---\(maxValue2)")
+
+var maxValue3 = bag.solveMaxValue3()
+print("FlyElephant---完全背包最大值为---\(maxValue3)")
 var personFloor:[Int] = [0 ,2 , 3, 5, 10, 8, 6]
 var elevator:Elevator = Elevator()
 var result = elevator.compute(person: personFloor, maxFloor: 6)
