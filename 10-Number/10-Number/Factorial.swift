@@ -65,6 +65,7 @@ class Factorial {
         return count
     }
     
+    // 2的整数次幂
     func isPowerOfBinary(num:Int) -> Bool {
         return num > 0 && (num & (num - 1)) == 0
     }

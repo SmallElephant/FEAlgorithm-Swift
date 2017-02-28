@@ -30,3 +30,22 @@ if isPower {
 } else {
     print("\(powerNum)不是2的整数次幂")
 }
+
+var targetArr = FEArray()
+var data:[Int] = [1,1,3,4,1,5,1]
+var arrResult:Int?  = targetArr.moreThanHalfNumber(arr: data)
+if arrResult != nil {
+    print("\(data)超过一半的数字是---\(arrResult!)")
+}
+
+var statis:Statistics = Statistics()
+var maxNum:Int = 123
+var statisResult:Int = statis.sumls(num: maxNum)
+var statisResult2:Int = statis.sumlsSimple(num: maxNum)
+
+print("1...\(maxNum)中1的个数---\(statisResult)---\(statisResult2)")
+
+
+
+
+

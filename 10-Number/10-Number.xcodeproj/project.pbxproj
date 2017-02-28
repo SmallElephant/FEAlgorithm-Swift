@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A89512E71E64FF6500AF0DCF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512E61E64FF6500AF0DCF /* main.swift */; };
 		A89512EE1E64FF9400AF0DCF /* Factorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512ED1E64FF9400AF0DCF /* Factorial.swift */; };
+		A89512F01E6573DF00AF0DCF /* FEArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512EF1E6573DF00AF0DCF /* FEArray.swift */; };
+		A89512F21E657EED00AF0DCF /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512F11E657EED00AF0DCF /* Statistics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		A89512E31E64FF6500AF0DCF /* 10-Number */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "10-Number"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89512E61E64FF6500AF0DCF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A89512ED1E64FF9400AF0DCF /* Factorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factorial.swift; sourceTree = "<group>"; };
+		A89512EF1E6573DF00AF0DCF /* FEArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FEArray.swift; sourceTree = "<group>"; };
+		A89512F11E657EED00AF0DCF /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			children = (
 				A89512E61E64FF6500AF0DCF /* main.swift */,
 				A89512ED1E64FF9400AF0DCF /* Factorial.swift */,
+				A89512EF1E6573DF00AF0DCF /* FEArray.swift */,
+				A89512F11E657EED00AF0DCF /* Statistics.swift */,
 			);
 			path = "10-Number";
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 			files = (
 				A89512E71E64FF6500AF0DCF /* main.swift in Sources */,
 				A89512EE1E64FF9400AF0DCF /* Factorial.swift in Sources */,
+				A89512F21E657EED00AF0DCF /* Statistics.swift in Sources */,
+				A89512F01E6573DF00AF0DCF /* FEArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
