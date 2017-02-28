@@ -42,10 +42,9 @@ var statis:Statistics = Statistics()
 var maxNum:Int = 123
 var statisResult:Int = statis.sumls(num: maxNum)
 var statisResult2:Int = statis.sumlsSimple(num: maxNum)
-
-print("1...\(maxNum)中1的个数---\(statisResult)---\(statisResult2)")
-
-
+var statisResult3:Int = statis.sumlsCommon(num: maxNum, target: 2)
+print("FlyElephant--1...\(maxNum)中1的个数---\(statisResult)---\(statisResult2)")
+print("FlyElephant--1...\(maxNum)中2的个数---\(statisResult3)")
 
 
 
