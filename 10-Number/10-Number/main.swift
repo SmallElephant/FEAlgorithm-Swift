@@ -11,18 +11,17 @@ import Foundation
 var factorial:Factorial = Factorial()
 
 var result1 = factorial.compute1(num: 20)
-
-print("最后的结果---\(result1)")
+print("FlyElephant-10进制0的个数---\(result1)")
 
 var result2 = factorial.compute2(num: 20)
 
-print("最后的结果---\(result2)")
+print("FlyElephant-10进制0的个数---\(result2)")
 
-var result3 = factorial.lowestOne(num: 100)
-print("最后的结果---\(result3)")
+var result3 = factorial.lowestOne(num: 10)
+print("FlyElephant-1的位置---\(result3)")
 
-var result4 = factorial.lowestOne1(num: 100)
-print("最后的结果---\(result4)")
+var result4 = factorial.lowestOne1(num: 10)
+print("FlyElephant-1的位置---\(result4)")
 
 var powerNum:Int = 64
 var isPower = factorial.isPowerOfBinary(num: powerNum)

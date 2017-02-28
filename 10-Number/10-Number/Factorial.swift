@@ -36,7 +36,6 @@ class Factorial {
             count += temp / 5
             temp /= 5
         }
-        
         return count
     }
     
