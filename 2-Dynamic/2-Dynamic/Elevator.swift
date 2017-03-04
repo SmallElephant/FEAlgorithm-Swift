@@ -41,7 +41,6 @@ class Elevator {
     
     
     func compute2(person:[Int],maxFloor:Int) -> (Int,Int) {
-        
         var n1:Int = 0 // 第i层以下的人数
         var n2:Int = person[1] // 第i层的人数
         var n3:Int = 0 // 第i层以上的人数
