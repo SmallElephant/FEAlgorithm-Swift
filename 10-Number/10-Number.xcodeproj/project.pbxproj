@@ -12,6 +12,9 @@
 		A89512EE1E64FF9400AF0DCF /* Factorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512ED1E64FF9400AF0DCF /* Factorial.swift */; };
 		A89512F01E6573DF00AF0DCF /* FEArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512EF1E6573DF00AF0DCF /* FEArray.swift */; };
 		A89512F21E657EED00AF0DCF /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89512F11E657EED00AF0DCF /* Statistics.swift */; };
+		C56358351E6A98F9009E41B8 /* CommonNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56358341E6A98F9009E41B8 /* CommonNumber.swift */; };
+		C56358371E6AAB12009E41B8 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56358361E6AAB12009E41B8 /* Fibonacci.swift */; };
+		C56358391E6B03B5009E41B8 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56358381E6B03B5009E41B8 /* Find.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +36,9 @@
 		A89512ED1E64FF9400AF0DCF /* Factorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factorial.swift; sourceTree = "<group>"; };
 		A89512EF1E6573DF00AF0DCF /* FEArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FEArray.swift; sourceTree = "<group>"; };
 		A89512F11E657EED00AF0DCF /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		C56358341E6A98F9009E41B8 /* CommonNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonNumber.swift; sourceTree = "<group>"; };
+		C56358361E6AAB12009E41B8 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
+		C56358381E6B03B5009E41B8 /* Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Find.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				A89512EF1E6573DF00AF0DCF /* FEArray.swift */,
 				A89512F11E657EED00AF0DCF /* Statistics.swift */,
 				A821AD101E6657A500932E45 /* BigNumber.swift */,
+				C56358341E6A98F9009E41B8 /* CommonNumber.swift */,
+				C56358361E6AAB12009E41B8 /* Fibonacci.swift */,
+				C56358381E6B03B5009E41B8 /* Find.swift */,
 			);
 			path = "10-Number";
 			sourceTree = "<group>";
@@ -135,7 +144,10 @@
 				A89512E71E64FF6500AF0DCF /* main.swift in Sources */,
 				A89512EE1E64FF9400AF0DCF /* Factorial.swift in Sources */,
 				A821AD111E6657A500932E45 /* BigNumber.swift in Sources */,
+				C56358371E6AAB12009E41B8 /* Fibonacci.swift in Sources */,
+				C56358351E6A98F9009E41B8 /* CommonNumber.swift in Sources */,
 				A89512F21E657EED00AF0DCF /* Statistics.swift in Sources */,
+				C56358391E6B03B5009E41B8 /* Find.swift in Sources */,
 				A89512F01E6573DF00AF0DCF /* FEArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

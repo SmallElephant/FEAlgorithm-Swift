@@ -67,7 +67,27 @@ if bigIndex >= 0 {
     print("\(kData)")
 }
 
+var commonNumber:CommonNumber = CommonNumber()
+var commonResult:Int = commonNumber.gcd(a: 720, b: 1248)
+var commonResult2:Int = commonNumber.gcd1(a: 720, b: 1248)
+var commonResult3:Int = commonNumber.gcd2(a: 720, b: 1248)
 
+print("最大公约数---\(commonResult)----公约数---\(commonResult2)--公约数--\(commonResult3)")
+
+var fibonacci:Fibonacci = Fibonacci()
+var index:Int = 8
+var fibonacciResult1 = fibonacci.fibonaccciCount(n: index)
+var fibonacciResult2 = fibonacci.fibonaccciCount(n: index)
+print("斐波那契数列的第\(index)项--\(fibonacciResult1)----\(fibonacciResult2)")
+
+
+var find = Find()
+var findArr:[Int] = [100,5,6,8,3,7,9,10,0,40,1,2]
+var findResult1 = find.minMax(arr: findArr)
+var findResult2 = find.minMax1(arr: findArr)
+var findResult3 = find.minMax2(arr: findArr)
+
+print("最大最小的数值---\(findResult1)---最小数组--\(findResult2)---\(findResult3)")
 
 
 
