@@ -87,7 +87,14 @@ var findResult1 = find.minMax(arr: findArr)
 var findResult2 = find.minMax1(arr: findArr)
 var findResult3 = find.minMax2(arr: findArr)
 
-print("最大最小的数值---\(findResult1)---最小数组--\(findResult2)---\(findResult3)")
+print("FlyElephant-最大最小的数值---\(findResult1)---最小数组--\(findResult2)---\(findResult3)")
+
+
+var sumArr:[Int] =  [100,5,6,8,3,7,9,10,0,40,1,2]
+find.quickSort(arr: &sumArr, low: 0, high: sumArr.count - 1)
+var sumResult4:(Int,Int) = find.sumNumber(arr: sumArr, sum: 10)
+print("FlyElephant---\(sumResult4)")
+
 
 
 

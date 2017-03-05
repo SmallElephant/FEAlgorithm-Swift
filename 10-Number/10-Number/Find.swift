@@ -62,7 +62,6 @@ class Find {
         }
         
         return (min,max)
-        
     }
     
     func minMax2(arr:[Int]) -> (Int,Int) {
@@ -93,7 +92,53 @@ class Find {
         }
         
         return (min,max)
-        
     }
+    
+    func sumNumber(arr:[Int],sum:Int)->(Int,Int) {
+        var i:Int = 0
+        var j:Int = arr.count - 1
+        
+        while i < j {
+            if arr[i] + arr[j] < sum {
+                i += 1
+            } else if arr[i] + arr[j] > sum {
+                j -= 1
+            } else {
+                return (i,j)
+            }
+        }
+        return (-1,-1)
+    }
+    
+    func quickSort(arr:inout [Int],low:Int,high:Int)  {
+        if low >= high {
+            return
+        }
+        let mid:Int = partition(arr: &arr,low:low,high:high)
+        quickSort(arr: &arr, low: low, high: mid - 1)
+        quickSort(arr: &arr, low: mid + 1, high: high)
+    }
+    
+    func partition(arr:inout [Int],low:Int,high:Int) -> Int {
+        
+        let root:Int = arr[high]
+        var index:Int = low
+        
+        for i in low...high {
+            if arr[i] < root {
+                if i != index {
+                    swap(&arr[i], &arr[index])
+                }
+                index += 1
+            }
+        }
+        
+        if index != high {
+            swap(&arr[high], &arr[index])
+        }
+        
+        return index
+    }
+
     
 }
