@@ -95,10 +95,18 @@ find.quickSort(arr: &sumArr, low: 0, high: sumArr.count - 1)
 var sumResult4:(Int,Int) = find.sumNumber(arr: sumArr, sum: 10)
 print("FlyElephant---\(sumResult4)")
 
+var calculator:Calculator = Calculator()
+var calculatorData:[Int] = [2, 3, 4, 5, 6]
+var calResult:Int = calculator.multiMaxValue(arr: calculatorData)
+print("FlyElephant--子数组的最大乘积---\(calResult)")
 
+var subData:[Int] = [1,-1,2,-3,4,-5,6,-7]
+var sublen:Int = calculator.maxSubsequence(arr: subData)
+print("\(subData)最长递增子序列长度:\(sublen)")
 
-
-
+var reverseData:[String] = ["a","b","c","d","1","2","3","4"]
+calculator.reverseArr(arr: &reverseData, k: 4)
+print("数组移位的数据---\(reverseData)")
 
 
 

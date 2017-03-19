@@ -34,10 +34,14 @@ print("FlyElephant-去除重复之后的字符串---\(simple)")
 var isAnagram:Bool = hashSearch.isAnagram(first: "abca", next: "baccccc")
 print("FlyElephant-是否是变位词---\(isAnagram)")
 
-var orginalStr:String = "I am  FlyElephant"
-var reverseString:ReverseString = ReverseString()
-var reverseResult:String = reverseString.reverseSentence(str: orginalStr)
-print("反转之后的字符串---\(reverseResult)---")
 
-var roateResult:String = reverseString.leftRoateString(str: "abcdefg", len: 2)
-print("左旋转之后的字符串---\(roateResult)")
+var similarity:Similarity = Similarity()
+var strA:String = "abcdef"
+var strB:String = "abcdf"
+
+var distance:Int = similarity.calculate_distance(strA: strA, beginA: 0, endA: strA.characters.count - 1, strB: strB, beginB: 0, endB: strB.characters.count - 1)
+
+var distance2:Int = similarity.calculate_distance2(strA: strA, strB: strB)
+
+var similar:Double = 1.0 / (Double)(distance + 1)
+print("FlyElephant--\(strA)和\(strB)的距离:\(distance)-相似度:-\(similar)-距离:\(distance2)")
