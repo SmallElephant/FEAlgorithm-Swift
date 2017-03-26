@@ -12,6 +12,7 @@
 		A86EDBAD1E04D78800D7E62F /* RandomListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86EDBAC1E04D78800D7E62F /* RandomListNode.swift */; };
 		A86EDBAF1E04E60F00D7E62F /* RandomListClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86EDBAE1E04E60F00D7E62F /* RandomListClone.swift */; };
 		A8E6F0B01E28C83100EBD082 /* JosephList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6F0AF1E28C83100EBD082 /* JosephList.swift */; };
+		C51AC62D1E875ABA0017C09D /* DeleteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AC62C1E875ABA0017C09D /* DeleteNode.swift */; };
 		C5A436311DFC4387004F5C90 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A436301DFC4387004F5C90 /* SearchNode.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		A86EDBAC1E04D78800D7E62F /* RandomListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomListNode.swift; sourceTree = "<group>"; };
 		A86EDBAE1E04E60F00D7E62F /* RandomListClone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomListClone.swift; sourceTree = "<group>"; };
 		A8E6F0AF1E28C83100EBD082 /* JosephList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JosephList.swift; sourceTree = "<group>"; };
+		C51AC62C1E875ABA0017C09D /* DeleteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteNode.swift; sourceTree = "<group>"; };
 		C5A436301DFC4387004F5C90 /* SearchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				A86EDBAC1E04D78800D7E62F /* RandomListNode.swift */,
 				A86EDBAE1E04E60F00D7E62F /* RandomListClone.swift */,
 				A8E6F0AF1E28C83100EBD082 /* JosephList.swift */,
+				C51AC62C1E875ABA0017C09D /* DeleteNode.swift */,
 			);
 			path = "4-ListNode";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51AC62D1E875ABA0017C09D /* DeleteNode.swift in Sources */,
 				C5A436311DFC4387004F5C90 /* SearchNode.swift in Sources */,
 				A85A8FDE1D0CFBAD0044FAAD /* main.swift in Sources */,
 				A8E6F0B01E28C83100EBD082 /* JosephList.swift in Sources */,
