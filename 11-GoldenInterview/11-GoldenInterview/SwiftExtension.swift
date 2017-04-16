@@ -23,4 +23,18 @@ extension String {
         let end = characters.index(start, offsetBy: range.upperBound-range.lowerBound)
         return self[Range(start..<end)]
     }
+    
+    func toInt()->Int {
+        
+        var value:Int = 0
+        
+        for element in self.unicodeScalars {
+            value = Int(element.value)
+        }
+        
+        return value
+    }
+    
+
+    
 }
