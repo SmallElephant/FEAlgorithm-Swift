@@ -10,6 +10,8 @@
 		C51500C41EA1C70200B98E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500C31EA1C70200B98E5B /* main.swift */; };
 		C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */; };
 		C51500CF1EA1CB2D00B98E5B /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CE1EA1CB2D00B98E5B /* MyString.swift */; };
+		C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70101EAB406E0025D51D /* ListNode.swift */; };
+		C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70121EAB41B00025D51D /* ListNodeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		C51500C31EA1C70200B98E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
 		C51500CE1EA1CB2D00B98E5B /* MyString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
+		C5DB70101EAB406E0025D51D /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		C5DB70121EAB41B00025D51D /* ListNodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNodeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,18 @@
 				C51500C31EA1C70200B98E5B /* main.swift */,
 				C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */,
 				C51500CE1EA1CB2D00B98E5B /* MyString.swift */,
+				C5DB700F1EAB40420025D51D /* Node */,
 			);
 			path = "11-GoldenInterview";
+			sourceTree = "<group>";
+		};
+		C5DB700F1EAB40420025D51D /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				C5DB70101EAB406E0025D51D /* ListNode.swift */,
+				C5DB70121EAB41B00025D51D /* ListNodeManager.swift */,
+			);
+			path = Node;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +141,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51500C41EA1C70200B98E5B /* main.swift in Sources */,
+				C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */,
 				C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */,
 				C51500CF1EA1CB2D00B98E5B /* MyString.swift in Sources */,
+				C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +274,7 @@
 				C51500C91EA1C70200B98E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

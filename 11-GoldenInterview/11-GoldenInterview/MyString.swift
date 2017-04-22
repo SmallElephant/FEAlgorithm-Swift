@@ -172,6 +172,65 @@ class MyString {
         return result
     }
 
+    // 1.6 给定一个N*N矩阵表示的推向，数组旋转90度
+    
+    func rotate(data:inout [[Int]],n:Int)  {
+        
+        for layer in 0..<n / 2 {
+            let first:Int = layer
+            let last:Int = n - 1 - first
+            for i in first..<last {
+                
+                let offset:Int = i - first
+                let top:Int = data[first][i] // top 数值
+                
+                data[first][i] = data[last - offset][first] // 从左到上
+                
+                data[last - offset][first] = data[last][last - offset] // 从下到左
+                
+                data[last][last - offset] = data[i][last] // 从右到下
+                
+                data[i][last] = top // 从上到右
+            }
+        }
+    }
+    
+    // 1.7 如果某个元素为0，那么所在的行列都清零
+    
+    func clearZero(data:inout [[Int]])  {
+        
+        var rows:[Bool] = [Bool].init(repeating: false, count: data.count)
+        var cols:[Bool] = [Bool].init(repeating: false, count: data[0].count)
+        
+        for i in 0..<rows.count {
+            for j in 0..<cols.count {
+                if data[i][j] == 0 {
+                    rows[i] = true
+                    cols[j] = true
+                }
+            }
+        }
+        
+        for i in 0..<rows.count {
+            for j in 0..<cols.count {
+                if rows[i] || cols[j] {
+                    data[i][j] = 0
+                }
+            }
+        }
+    }
     
     
+    // 1.8 字符串旋转判断
+    
+    func isRotation(orginal:String,rotation:String) -> Bool {
+        
+        let len:Int = orginal.characters.count
+        
+        if len > 0 && len == rotation.characters.count {
+            let mergeStr:String = orginal + orginal
+            return mergeStr.contains(rotation)
+        }
+        return false
+    }
 }

@@ -39,5 +39,45 @@ var compressString:String = "abbcccdddd"
 var compressResult:String = myString.compressBetter(str: compressString)
 print("压缩结果:\(compressResult)")
 
+var rotateData:[[Int]] = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+myString.rotate(data: &rotateData, n: 4)
+print("FlyElephant--数组旋转90度数据---\(rotateData)")
+
+var clearData:[[Int]] = [[1,2,3,4,0],[5,6,7,8,9],[9,10,11,12,1],[13,14,15,16,17]]
+myString.clearZero(data: &clearData)
+print("FlyElephant--数组清零--\(clearData)")
+
+
+var originalStr:String = "FlyElephant"
+var rotationStr:String = "antFlyEleph"
+var result:Bool = myString.isRotation(orginal: originalStr, rotation: rotationStr)
+print("\(rotationStr)是\(originalStr)的结果\(result)")
+
+
+var listNodeManger:ListNodeManger = ListNodeManger()
+
+for i in 0..<10 {
+    listNodeManger.appendToTail(value: "\(i)")
+}
+
+for i in 0..<3 {
+    listNodeManger.appendToTail(value: "\(i)")
+}
+
+listNodeManger.printListNode(headNode: listNodeManger.headNode!)
+
+listNodeManger.deleteDuplitation(node: listNodeManger.headNode!)
+print("删除重复结点")
+
+listNodeManger.printListNode(headNode: listNodeManger.headNode!)
+
+
+
+var nthNode:ListNode? = listNodeManger.nthToLastNode(node: listNodeManger.headNode!, k: 3)
+if nthNode != nil {
+    print("FlyElephant--倒数的k个节点:\(nthNode!.value!)")
+}
+
+
 
 
