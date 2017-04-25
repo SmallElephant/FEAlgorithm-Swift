@@ -38,7 +38,7 @@ class ListNodeManger {
         }
     }
     
-    // 1. 移除未排序链表中的重复结点
+    // 2.1. 移除未排序链表中的重复结点
     
     func deleteDuplitation(node:ListNode)  {
         
@@ -59,7 +59,7 @@ class ListNodeManger {
         }
     }
     
-    // 1.2 倒数第k个节点
+    // 2.2 倒数第k个节点
     func nthToLastNode(node:ListNode,k:Int) -> ListNode? {
         if k <= 0 {
             return nil
@@ -86,5 +86,90 @@ class ListNodeManger {
         
         return p1
     }
+    
+    // 2.3 链表切分
+    
+    func partitionListNode(node:ListNode,x:Int) -> ListNode {
+        
+        var beforeStart:ListNode?
+        var beforeEnd:ListNode?
+        
+        var afterStart:ListNode?
+        var afterEnd:ListNode?
+        
+        var listNode:ListNode? = node
+        
+        while listNode != nil {
+            let next:ListNode? = listNode?.next
+            
+            let value:Int = Int((listNode?.value!)!)!
+            
+            if value < x {
+                if beforeStart == nil {
+                    beforeStart = listNode
+                    beforeEnd = listNode
+                } else {
+                    beforeEnd?.next = listNode
+                    beforeEnd = listNode
+                }
+            } else {
+                if afterStart == nil {
+                    afterStart = listNode
+                    afterEnd = listNode
+                } else {
+                    afterEnd?.next = listNode
+                    afterEnd = listNode
+                }
+            }
+            listNode = next
+        }
+        
+        if beforeStart == nil {
+            return afterStart!
+        }
+        
+        // before和end 合并
+        beforeEnd?.next = afterStart
+        
+        return beforeStart!
+    }
+    
+    func partitionListNode2(node:ListNode,x:Int) -> ListNode {
+        
+        var beforeStart:ListNode?
+        
+        var afterStart:ListNode?
+        
+        var listNode:ListNode? = node
+        
+        while listNode != nil {
+            let next:ListNode? = listNode?.next
+            
+            let value:Int = Int((listNode?.value!)!)!
+            
+            if value < x {
+                listNode?.next = beforeStart
+                beforeStart = listNode
+            } else {
+                listNode?.next = afterStart
+                afterStart = listNode
+            }
+            listNode = next
+        }
+        
+        if beforeStart == nil {
+            return afterStart!
+        }
+        
+        var head:ListNode = beforeStart!
+        
+        while beforeStart?.next != nil {
+            beforeStart = beforeStart?.next
+        }
+        beforeStart?.next = afterStart
+        
+        return head
+    }
+    
     
 }

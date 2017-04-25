@@ -79,5 +79,26 @@ if nthNode != nil {
 }
 
 
+listNodeManger.headNode = nil
+
+listNodeManger.appendToTail(value: "\(1)")
+listNodeManger.appendToTail(value: "\(3)")
+listNodeManger.appendToTail(value: "\(5)")
+listNodeManger.appendToTail(value: "\(2)")
+listNodeManger.appendToTail(value: "\(4)")
+listNodeManger.appendToTail(value: "\(6)")
+listNodeManger.appendToTail(value: "\(8)")
+listNodeManger.appendToTail(value: "\(7)")
+listNodeManger.appendToTail(value: "\(9)")
+
+
+listNodeManger.printListNode(headNode: listNodeManger.headNode!)
+print("开始进行链表切分")
+var partitionHeadNode:ListNode = listNodeManger.partitionListNode(node: listNodeManger.headNode!, x: 5)
+listNodeManger.printListNode(headNode: partitionHeadNode)
+
+
+
+
 
 
