@@ -33,9 +33,10 @@ class ListNodeManger {
         
         var node:ListNode? = headNode
         while node != nil {
-            print("\(node!.value!)")
+            print("\(node!.value!)", terminator: " ")
             node = node?.next
         }
+        print("")
     }
     
     // 2.1. 移除未排序链表中的重复结点
@@ -102,10 +103,10 @@ class ListNodeManger {
         while listNode != nil {
             let next:ListNode? = listNode?.next
             
-            let value:Int = Int((listNode?.value!)!)!
+            let value:Int = Int((listNode?.value)!)!
             
             if value < x {
-                if beforeStart == nil {
+                if beforeStart == nil { // 插入beforeStart之后
                     beforeStart = listNode
                     beforeEnd = listNode
                 } else {
@@ -113,7 +114,7 @@ class ListNodeManger {
                     beforeEnd = listNode
                 }
             } else {
-                if afterStart == nil {
+                if afterStart == nil { // 插入afterStart之后
                     afterStart = listNode
                     afterEnd = listNode
                 } else {
@@ -128,7 +129,6 @@ class ListNodeManger {
             return afterStart!
         }
         
-        // before和end 合并
         beforeEnd?.next = afterStart
         
         return beforeStart!
@@ -137,15 +137,13 @@ class ListNodeManger {
     func partitionListNode2(node:ListNode,x:Int) -> ListNode {
         
         var beforeStart:ListNode?
-        
         var afterStart:ListNode?
         
         var listNode:ListNode? = node
         
         while listNode != nil {
             let next:ListNode? = listNode?.next
-            
-            let value:Int = Int((listNode?.value!)!)!
+            let value:Int = Int((listNode?.value)!)!
             
             if value < x {
                 listNode?.next = beforeStart
@@ -154,6 +152,7 @@ class ListNodeManger {
                 listNode?.next = afterStart
                 afterStart = listNode
             }
+            
             listNode = next
         }
         
@@ -161,11 +160,13 @@ class ListNodeManger {
             return afterStart!
         }
         
-        var head:ListNode = beforeStart!
         
-        while beforeStart?.next != nil {
+        let head:ListNode = beforeStart!
+        
+        while beforeStart?.next != nil { // 找到beforeStart的最后节点
             beforeStart = beforeStart?.next
         }
+        
         beforeStart?.next = afterStart
         
         return head

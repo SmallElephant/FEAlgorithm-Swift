@@ -93,10 +93,12 @@ listNodeManger.appendToTail(value: "\(9)")
 
 
 listNodeManger.printListNode(headNode: listNodeManger.headNode!)
-print("开始进行链表切分")
+print("FlyElephant--链表切分1")
 var partitionHeadNode:ListNode = listNodeManger.partitionListNode(node: listNodeManger.headNode!, x: 5)
 listNodeManger.printListNode(headNode: partitionHeadNode)
-
+print("FlyElephant--链表切分2")
+partitionHeadNode = listNodeManger.partitionListNode2(node: listNodeManger.headNode!, x: 5)
+listNodeManger.printListNode(headNode: partitionHeadNode)
 
 
 
