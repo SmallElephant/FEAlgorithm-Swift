@@ -100,6 +100,55 @@ print("FlyElephant--链表切分2")
 partitionHeadNode = listNodeManger.partitionListNode2(node: listNodeManger.headNode!, x: 5)
 listNodeManger.printListNode(headNode: partitionHeadNode)
 
+listNodeManger.headNode = nil
+
+listNodeManger.appendToTail(value: "\(0)")
+listNodeManger.appendToTail(value: "\(5)")
+listNodeManger.appendToTail(value: "\(2)")
+listNodeManger.appendToTail(value: "\(7)")
+
+var addHeadNode1:ListNode = listNodeManger.headNode!
+listNodeManger.headNode = nil
+
+listNodeManger.appendToTail(value: "\(7)")
+listNodeManger.appendToTail(value: "\(8)")
+listNodeManger.appendToTail(value: "\(9)")
+
+var addHeadNode2:ListNode = listNodeManger.headNode!
+
+var addResultNode:ListNode = listNodeManger.addListNode(node1: addHeadNode1, node2: addHeadNode2)
+print("FlyElephant---链表原始数据")
+listNodeManger.printListNode(headNode: addHeadNode1)
+listNodeManger.printListNode(headNode: addHeadNode2)
+print("FlyElephant---相加之后结果")
+listNodeManger.printListNode(headNode: addResultNode)
+
+var addResultNode2:ListNode? = listNodeManger.addListNode1(node1: addHeadNode1, node2: addHeadNode2, carry: 0)
+print("FlyElephant---相加之后结果2")
+listNodeManger.printListNode(headNode: addResultNode2!)
+
+var listCount:Int = listNodeManger.listNodeCount(listNode: addHeadNode2)
+print("链表的长度---\(listCount)")
+var addHeadNode3:ListNode = listNodeManger.paddingListNode(node: addHeadNode2, padding: 2)
+listNodeManger.printListNode(headNode: addHeadNode3)
+
+listNodeManger.headNode = nil
+
+listNodeManger.appendToTail(value: "\(9)")
+listNodeManger.appendToTail(value: "\(5)")
+listNodeManger.appendToTail(value: "\(8)")
+
+var sequenceHeadNode1:ListNode! = listNodeManger.headNode
+
+listNodeManger.headNode = nil
+listNodeManger.appendToTail(value: "\(8)")
+listNodeManger.appendToTail(value: "\(7)")
+
+var sequenceHeadNode2:ListNode! = listNodeManger.headNode
+
+var sequenceHeadNode3:ListNode? = listNodeManger.addListNode3(node1: sequenceHeadNode1, node2: sequenceHeadNode2)
+print("FlyElephant---正向相加结果")
+listNodeManger.printListNode(headNode: sequenceHeadNode3!)
 
 
 

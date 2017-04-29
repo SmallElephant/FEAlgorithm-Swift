@@ -8,6 +8,11 @@
 
 import Foundation
 
+class ListNodeSum {
+    var node:ListNode?
+    var carry:Int = 0
+}
+
 class ListNodeManger {
     
     var headNode:ListNode?
@@ -172,5 +177,165 @@ class ListNodeManger {
         return head
     }
     
+    // 2.5 链表加法
+    func addListNode(node1:ListNode,node2:ListNode) -> ListNode {
+        
+        var first:ListNode? = node1
+        var second:ListNode? = node2
+        
+        var result:ListNode?
+        
+        var carry:Int = 0
+        
+        while first != nil || second != nil {
+            
+            var num1:Int = 0
+            if (first?.value) != nil {
+                num1 = Int((first?.value)!)!
+            }
+            
+            var num2:Int = 0
+            if second?.value != nil {
+                num2 = Int((second?.value)!)!
+            }
+            
+            let value:Int = num1 + num2 + carry
+            
+            let mod:Int = value % 10
+            carry = value / 10
+            
+             let node:ListNode = ListNode(value: "\(mod)")
+            if result == nil {
+                result = node
+            } else {
+                var nextNode:ListNode? = result
+                while nextNode?.next != nil {
+                    nextNode = nextNode?.next
+                }
+                nextNode?.next = node
+            }
+            
+            first = first?.next
+            second = second?.next
+        }
+        
+        return result!
+    }
+    
+    
+    func addListNode1(node1:ListNode?,node2:ListNode?,carry:Int) -> ListNode? {
+        
+        if node1 == nil && node2 == nil && carry == 0 {
+            return nil
+        }
+        
+        var value:Int = carry
+        
+        if node1?.value != nil {
+            value += Int((node1?.value)!)!
+        }
+        
+        if node2?.value != nil {
+            value += Int((node2?.value)!)!
+        }
+        
+        let mod:Int = value % 10
+        let nextCarry:Int = value / 10
+        
+        let result:ListNode = ListNode(value: "\(mod)")
+        let nextNode:ListNode? = addListNode1(node1: node1?.next, node2: node2?.next, carry: nextCarry)
+        result.next = nextNode
+        return result
+    }
+    
+    // 2.5 链表正向相加
+    
+    func listNodeCount(listNode:ListNode) -> Int {
+        
+        var node:ListNode? = listNode
+        var count:Int = 0
+        
+        while node != nil {
+            count += 1
+            node = node?.next
+        }
+        return count
+    }
+    
+    func paddingListNode(node:ListNode,padding:Int) -> ListNode {
+        
+        var head:ListNode = node
+        
+        for _ in 0..<padding {
+            let listNode:ListNode = ListNode(value: "\(0)")
+            listNode.next = head
+            head = listNode
+        }
+        
+        return head
+    }
+    
+    func insertBefore(node:ListNode?,value:Int) -> ListNode {
+        
+        let listNode:ListNode = ListNode(value: "\(value)")
+        listNode.next = node
+        return listNode
+    }
+    
+    func addListNode3(node1:ListNode,node2:ListNode) -> ListNode? {
+        
+        let count1:Int = listNodeCount(listNode: node1)
+        let count2:Int = listNodeCount(listNode: node2)
+        
+        var first:ListNode = node1
+        var second:ListNode = node2
+        
+        if count1 > count2 {
+            second = paddingListNode(node: second, padding: count1 - count2)
+        } else {
+            first = paddingListNode(node: first, padding: count2 - count1)
+        }
+        
+        let sumNode:ListNodeSum? = addListHelper(node1: first, node2: second)
+        
+        if sumNode?.node != nil {
+            if sumNode?.carry == 0 {
+                return sumNode?.node
+            } else {
+                let result:ListNode = insertBefore(node: sumNode?.node, value: (sumNode?.carry)!)
+                return result
+            }
+        }
+        return nil
+    }
+    
+    
+    func addListHelper(node1:ListNode?,node2:ListNode?) -> ListNodeSum? {
+        if node1 == nil && node2 == nil {
+            return ListNodeSum()
+        }
+        
+        let sumNode:ListNodeSum? = addListHelper(node1: node1?.next, node2: node2?.next)
+        
+        var value:Int = 0
+        
+        if node1?.value != nil {
+            value += Int((node1?.value)!)!
+        }
+        
+        if node2?.value != nil {
+            value += Int((node2?.value)!)!
+        }
+        
+        if sumNode != nil {
+            value += (sumNode?.carry)!
+        }
+        
+        let fullNode:ListNode? = insertBefore(node: sumNode?.node, value: value % 10)
+        sumNode?.carry = value / 10
+        sumNode?.node = fullNode
+        
+        return sumNode
+    }
     
 }

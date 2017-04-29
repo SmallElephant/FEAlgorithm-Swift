@@ -14,7 +14,7 @@ class ListNode {
     
     var next:ListNode?
     
-    init(value:String?) {
+     init(value:String?) {
         self.value = value
     }
     
