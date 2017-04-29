@@ -150,6 +150,18 @@ var sequenceHeadNode3:ListNode? = listNodeManger.addListNode3(node1: sequenceHea
 print("FlyElephant---正向相加结果")
 listNodeManger.printListNode(headNode: sequenceHeadNode3!)
 
+var circleHead:ListNode = ListNode(value: "1")
+var circelNode1:ListNode = ListNode(value: "2")
+var circelNode2:ListNode = ListNode(value: "3")
+var circelNode3:ListNode = ListNode(value: "4")
+circleHead.next = circelNode1
+circelNode1.next = circelNode2
+circelNode2.next = circelNode3
+circelNode3.next = circleHead
+var beginingNode:ListNode? = listNodeManger.findBeginingNode(headNode: circelNode1)
+print("FlyElephant---环路链表开始值---\(beginingNode!.value!)")
+
+
 
 
 

@@ -338,4 +338,34 @@ class ListNodeManger {
         return sumNode
     }
     
+    // 2.6 环路开头结点
+    func findBeginingNode(headNode:ListNode) -> ListNode? {
+        
+        var slow:ListNode? = headNode
+        var fast:ListNode? = headNode
+        
+        // 环路节点相交
+        while fast != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+            if slow?.value == fast?.value {
+                break
+            }
+        }
+        
+        // 校验
+        if fast == nil || fast?.next == nil {
+            return nil
+        }
+        
+        // 重置开始节点
+        slow = headNode
+        while slow?.value != fast?.value {
+            slow = slow?.next
+            fast = fast?.next
+        }
+        
+        return fast
+    }
+    
 }
