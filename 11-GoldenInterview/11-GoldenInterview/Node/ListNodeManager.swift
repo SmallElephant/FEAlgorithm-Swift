@@ -368,4 +368,66 @@ class ListNodeManger {
         return fast
     }
     
+    // 2.7 是否是回文链表
+    
+    func isPalindrome(node:ListNode) -> Bool {
+        
+        var headNode:ListNode? = node
+        var preNode:ListNode?
+        var reverseHeadNode:ListNode?
+        
+        while headNode != nil {
+            let next:ListNode? = headNode?.next
+            
+            if next == nil {
+                reverseHeadNode = headNode
+            }
+            
+            headNode?.next = preNode
+            preNode = headNode
+            
+            headNode = next
+        }
+        
+        headNode = node
+        while headNode != nil {
+            if  headNode?.value != reverseHeadNode?.value {
+                return false
+            }
+            headNode = headNode?.next
+            reverseHeadNode = reverseHeadNode?.next
+        }
+        return true
+    }
+    
+    func isPalindrome1(node:ListNode) -> Bool {
+
+        var list:[String?] = []
+        
+        var slow:ListNode? = node
+        var fast:ListNode? = node
+        
+        while fast != nil && fast?.next != nil {
+            list.append(slow?.value)
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        
+        // 奇数个元素，跳过中间元素
+        if fast != nil {
+            slow = slow?.next
+        }
+        
+        while slow != nil {
+            let data:String? = list.last!
+            list.removeLast()
+            if  slow?.value != data {
+                return false
+            }
+            slow = slow?.next
+        }
+        
+        return true
+    }
+    
 }

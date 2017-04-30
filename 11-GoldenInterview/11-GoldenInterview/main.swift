@@ -162,6 +162,24 @@ var beginingNode:ListNode? = listNodeManger.findBeginingNode(headNode: circelNod
 print("FlyElephant---环路链表开始值---\(beginingNode!.value!)")
 
 
+listNodeManger.headNode = nil
 
+listNodeManger.appendToTail(value: "\(1)")
+listNodeManger.appendToTail(value: "\(2)")
+listNodeManger.appendToTail(value: "\(3)")
+listNodeManger.appendToTail(value: "\(2)")
+listNodeManger.appendToTail(value: "\(1)")
 
+var isRome:Bool = listNodeManger.isPalindrome(node: listNodeManger.headNode!)
+if isRome {
+    print("FlyElephant---回文链表")
+} else {
+    print("FlyElephant---非回文链表")
+}
 
+isRome = listNodeManger.isPalindrome1(node: listNodeManger.headNode!)
+if isRome {
+    print("FlyElephant---回文链表")
+} else {
+    print("FlyElephant---非回文链表")
+}
