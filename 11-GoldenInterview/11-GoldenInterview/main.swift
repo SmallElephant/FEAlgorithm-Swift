@@ -183,3 +183,87 @@ if isRome {
 } else {
     print("FlyElephant---非回文链表")
 }
+
+
+
+var myStack:Stack = Stack()
+for i in 10..<25 {
+    myStack.push(stackNum: 0, value: i)
+}
+
+for i in 30..<36 {
+    myStack.push(stackNum: 1, value: i)
+}
+
+for i in 40..<48 {
+    myStack.push(stackNum: 2, value: i)
+}
+
+for i in 0..<3 {
+    for j in 0..<10 {
+        var value:Int? = myStack.pop(stackNum: i)
+        if value != nil {
+            print("FlyElephant---栈号\(i)---\(j)---值:\(String(describing: value!))")
+        }
+    }
+}
+
+var minStack:MinStack = MinStack()
+var minData:[Int] = [6, 5, 7, 3, 3, 8, 1, 10]
+for i in 0..<minData.count {
+    minStack.push(value: minData[i])
+}
+
+for i in 0..<3 {
+    minStack.pop()
+}
+print("FlyElephant---minStack的数组-----\(minStack.stack)---最小值--\(minStack.minStack)")
+
+
+var stacks:Stacks = Stacks()
+
+for i in 0..<13 {
+    stacks.push(num: i)
+}
+
+print("\(stacks.bufferData)")
+
+for i in 0..<8 {
+    var value:Int? = stacks.pop()
+    if value != nil {
+        print("FlyElephant--Pop---\(value!)")
+    }
+}
+print("\(stacks.bufferData)")
+
+
+var hanoi:Hanoi = Hanoi()
+hanoi.move(diskCount: 3)
+hanoi.move2(diskCount: 3)
+
+var myQueue:MyQueue = MyQueue()
+for i in 0...3 {
+    myQueue.push(value: i)
+}
+
+var topValue:Int? = myQueue.peek()
+if topValue != nil {
+    print("FlyElephant---顶部数据:\(topValue!)")
+}
+
+for i in 10...15 {
+    myQueue.push(value: i)
+}
+
+for i in 0...4 {
+    var topValue:Int? = myQueue.peek()
+    if topValue != nil {
+        print("FlyElephant---顶部数据:\(topValue!)")
+    }
+}
+
+var stackSort:StackSort = StackSort()
+var sortData:[Int] = stackSort.sort(data: [8,5,4,3,10,1,7,9,2,6])
+print("FlyElephant---排序之后的数据---\(sortData)")
+
+

@@ -10,6 +10,12 @@
 		C51500C41EA1C70200B98E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500C31EA1C70200B98E5B /* main.swift */; };
 		C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */; };
 		C51500CF1EA1CB2D00B98E5B /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CE1EA1CB2D00B98E5B /* MyString.swift */; };
+		C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3AF1EBD9A84007C2623 /* Stack.swift */; };
+		C558D3B21EBDAB3C007C2623 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B11EBDAB3C007C2623 /* MinStack.swift */; };
+		C558D3B41EBDC611007C2623 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B31EBDC611007C2623 /* Stacks.swift */; };
+		C558D3B61EBDED1D007C2623 /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B51EBDED1D007C2623 /* Hanoi.swift */; };
+		C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B71EBEBB68007C2623 /* MyQueue.swift */; };
+		C558D3BA1EBED9D2007C2623 /* StackSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B91EBED9D2007C2623 /* StackSort.swift */; };
 		C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70101EAB406E0025D51D /* ListNode.swift */; };
 		C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70121EAB41B00025D51D /* ListNodeManager.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +37,12 @@
 		C51500C31EA1C70200B98E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
 		C51500CE1EA1CB2D00B98E5B /* MyString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
+		C558D3AF1EBD9A84007C2623 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		C558D3B11EBDAB3C007C2623 /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		C558D3B31EBDC611007C2623 /* Stacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
+		C558D3B51EBDED1D007C2623 /* Hanoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
+		C558D3B71EBEBB68007C2623 /* MyQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQueue.swift; sourceTree = "<group>"; };
+		C558D3B91EBED9D2007C2623 /* StackSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSort.swift; sourceTree = "<group>"; };
 		C5DB70101EAB406E0025D51D /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		C5DB70121EAB41B00025D51D /* ListNodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNodeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,9 +80,23 @@
 				C51500C31EA1C70200B98E5B /* main.swift */,
 				C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */,
 				C51500CE1EA1CB2D00B98E5B /* MyString.swift */,
+				C558D3AE1EBD9A75007C2623 /* Stack */,
 				C5DB700F1EAB40420025D51D /* Node */,
 			);
 			path = "11-GoldenInterview";
+			sourceTree = "<group>";
+		};
+		C558D3AE1EBD9A75007C2623 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				C558D3AF1EBD9A84007C2623 /* Stack.swift */,
+				C558D3B11EBDAB3C007C2623 /* MinStack.swift */,
+				C558D3B31EBDC611007C2623 /* Stacks.swift */,
+				C558D3B51EBDED1D007C2623 /* Hanoi.swift */,
+				C558D3B71EBEBB68007C2623 /* MyQueue.swift */,
+				C558D3B91EBED9D2007C2623 /* StackSort.swift */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 		C5DB700F1EAB40420025D51D /* Node */ = {
@@ -140,10 +166,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C558D3BA1EBED9D2007C2623 /* StackSort.swift in Sources */,
+				C558D3B41EBDC611007C2623 /* Stacks.swift in Sources */,
 				C51500C41EA1C70200B98E5B /* main.swift in Sources */,
 				C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */,
+				C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */,
 				C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */,
 				C51500CF1EA1CB2D00B98E5B /* MyString.swift in Sources */,
+				C558D3B21EBDAB3C007C2623 /* MinStack.swift in Sources */,
+				C558D3B61EBDED1D007C2623 /* Hanoi.swift in Sources */,
+				C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */,
 				C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
