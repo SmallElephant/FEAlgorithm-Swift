@@ -267,3 +267,9 @@ var sortData:[Int] = stackSort.sort(data: [8,5,4,3,10,1,7,9,2,6])
 print("FlyElephant---排序之后的数据---\(sortData)")
 
 
+var bitManager:BitManager = BitManager()
+
+var bitCount:Int = bitManager.bitSwapRequired(a: 10, b: 100)
+var bitCount2:Int = bitManager.bitSwapRequired2(a: 10, b: 100)
+print("FlyElephant--需要改变:\(bitCount)位---\(bitCount2)位")
+
