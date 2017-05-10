@@ -273,3 +273,10 @@ var bitCount:Int = bitManager.bitSwapRequired(a: 10, b: 100)
 var bitCount2:Int = bitManager.bitSwapRequired2(a: 10, b: 100)
 print("FlyElephant--需要改变:\(bitCount)位---\(bitCount2)位")
 
+var bitBinary:String = bitManager.printBinary(num: 0.625)
+var bitBinary2:String = bitManager.printBinary2(num: 0.625)
+print("FlyElephant--二进制的表现形式:\(bitBinary)---\(bitBinary2)")
+
+var test:String = myString.reverseSentence(sentence: "I am   FlyElephant")
+print("单词翻转结果---\(test)")
+

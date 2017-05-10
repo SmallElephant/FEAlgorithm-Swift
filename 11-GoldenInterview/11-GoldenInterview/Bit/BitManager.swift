@@ -40,4 +40,62 @@ class BitManager {
         return count
     }
     
+    // 5.6 给定一个介于0和1之间的实数，类型为double，打印它的二进制表示。如果该数字无法精准地用32位以内的二进制表示，则打印“ERROR”.
+    func printBinary(num:Float) -> String {
+        if num >= 1 && num <= 0 {
+            return "ERROR"
+        }
+        
+        var number:Float = num
+        var binaryString:String = "."
+        
+        while number > 0 {
+            
+            if binaryString.characters.count >= 32 {
+                return "ERROR"
+            }
+            
+            let temp:Float = number * 2
+            
+            if temp >= 1 {
+                binaryString.append("1")
+                number = temp - 1
+            } else {
+                binaryString.append("0")
+                number = temp
+            }
+        }
+        
+        return binaryString
+    }
+    
+    func printBinary2(num:Float) -> String {
+        
+        if num >= 1 && num <= 0 {
+            return "ERROR"
+        }
+        
+        var number:Float = num
+        var binaryString:String = "."
+        var factor:Float = 0.5
+        
+        while number > 0 {
+            if binaryString.characters.count >= 32 {
+                return "ERROR"
+            }
+            
+            if number >= factor {
+                binaryString.append("1")
+                number -= factor
+            } else {
+                binaryString.append("0")
+            }
+            
+            factor /= 2
+            
+        }
+        
+        return binaryString
+    }
+    
 }

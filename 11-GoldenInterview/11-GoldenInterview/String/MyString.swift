@@ -233,4 +233,52 @@ class MyString {
         }
         return false
     }
+    
+    // 句子翻转
+    
+    func reverseSentence(sentence:String) -> String {
+        
+        if sentence.characters.count  == 0 {
+            return sentence
+        }
+        
+        var strArr:[Character] = []
+        
+        for char in sentence.characters {
+            strArr.append(char)
+        }
+        
+        reverseArr(strArr: &strArr, start: 0, end:strArr.count - 1)
+        
+        var start:Int = 0
+        var end:Int = 0
+        
+        while end < strArr.count {
+            if strArr[start] == " " {
+                start += 1
+                end += 1
+            } else if strArr[end] == " " {
+                reverseArr(strArr: &strArr, start:start, end:end - 1)
+                start = end
+            } else {
+                end += 1
+            }
+        }
+        
+        return String(strArr)
+    }
+    
+    private func reverseArr(strArr:inout [Character],start:Int,end:Int) {
+        
+        var low:Int = start
+        var high:Int = end
+        
+        while low < high {
+            swap(&strArr[low], &strArr[high])
+            low += 1
+            high -= 1
+        }
+    }
+    
+    
 }
