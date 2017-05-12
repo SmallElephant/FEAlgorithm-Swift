@@ -277,6 +277,15 @@ var bitBinary:String = bitManager.printBinary(num: 0.625)
 var bitBinary2:String = bitManager.printBinary2(num: 0.625)
 print("FlyElephant--二进制的表现形式:\(bitBinary)---\(bitBinary2)")
 
-var test:String = myString.reverseSentence(sentence: "I am   FlyElephant")
-print("单词翻转结果---\(test)")
+var recursion:Recursion = Recursion()
+var steps:Int = recursion.countStepWays(n: 10)
+var map:[Int] = [Int].init(repeating: -1, count: 11)
+var steps2:Int = recursion.countStepWays2(n: 10, map: &map)
+print("FlyElephant--跳10级台阶的跳法---\(steps)-----\(steps2)")
+
+
+
+
+
+
 
