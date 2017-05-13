@@ -18,6 +18,9 @@
 		C558D3B61EBDED1D007C2623 /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B51EBDED1D007C2623 /* Hanoi.swift */; };
 		C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B71EBEBB68007C2623 /* MyQueue.swift */; };
 		C558D3BA1EBED9D2007C2623 /* StackSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B91EBED9D2007C2623 /* StackSort.swift */; };
+		C558D4371EC69F69007C2623 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D4361EC69F69007C2623 /* Tree.swift */; };
+		C558D4391EC6AE07007C2623 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D4381EC6AE07007C2623 /* BinaryTree.swift */; };
+		C56C2EA41EC6B4E100A1026A /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C2EA31EC6B4E100A1026A /* BinarySearchTree.swift */; };
 		C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70101EAB406E0025D51D /* ListNode.swift */; };
 		C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB70121EAB41B00025D51D /* ListNodeManager.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,9 @@
 		C558D3B51EBDED1D007C2623 /* Hanoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
 		C558D3B71EBEBB68007C2623 /* MyQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQueue.swift; sourceTree = "<group>"; };
 		C558D3B91EBED9D2007C2623 /* StackSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSort.swift; sourceTree = "<group>"; };
+		C558D4361EC69F69007C2623 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		C558D4381EC6AE07007C2623 /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		C56C2EA31EC6B4E100A1026A /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		C5DB70101EAB406E0025D51D /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		C5DB70121EAB41B00025D51D /* ListNodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNodeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 			children = (
 				C51500C31EA1C70200B98E5B /* main.swift */,
 				C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */,
+				C558D4351EC69F55007C2623 /* Tree */,
 				A844CEAC1EC61FF500AC7E9C /* Recursion */,
 				A89FAA101EC288D7001B9A30 /* String */,
 				A89FA9F01EC22D8C001B9A30 /* Bit */,
@@ -127,6 +134,16 @@
 				C558D3B91EBED9D2007C2623 /* StackSort.swift */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		C558D4351EC69F55007C2623 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				C558D4361EC69F69007C2623 /* Tree.swift */,
+				C558D4381EC6AE07007C2623 /* BinaryTree.swift */,
+				C56C2EA31EC6B4E100A1026A /* BinarySearchTree.swift */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		C5DB700F1EAB40420025D51D /* Node */ = {
@@ -198,14 +215,17 @@
 			files = (
 				C558D3BA1EBED9D2007C2623 /* StackSort.swift in Sources */,
 				A89FAA121EC288DE001B9A30 /* MyString.swift in Sources */,
+				C558D4391EC6AE07007C2623 /* BinaryTree.swift in Sources */,
 				C558D3B41EBDC611007C2623 /* Stacks.swift in Sources */,
 				C51500C41EA1C70200B98E5B /* main.swift in Sources */,
 				C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */,
 				C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */,
 				C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */,
+				C558D4371EC69F69007C2623 /* Tree.swift in Sources */,
 				C558D3B21EBDAB3C007C2623 /* MinStack.swift in Sources */,
 				C558D3B61EBDED1D007C2623 /* Hanoi.swift in Sources */,
 				A89FA9F21EC22DA5001B9A30 /* BitManager.swift in Sources */,
+				C56C2EA41EC6B4E100A1026A /* BinarySearchTree.swift in Sources */,
 				C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */,
 				A844CEAE1EC6200900AC7E9C /* Recursion.swift in Sources */,
 				C5DB70111EAB406E0025D51D /* ListNode.swift in Sources */,

@@ -284,8 +284,82 @@ var steps2:Int = recursion.countStepWays2(n: 10, map: &map)
 print("FlyElephant--跳10级台阶的跳法---\(steps)-----\(steps2)")
 
 
+var tree:Tree = Tree()
+var preListData:[String] = ["1","2","4","#","#","5","7","#","#","#","3","#","6","#","#"]
+var preOrderRoot:TreeNode?
+
+tree.createTreeByPreOrder(root: &preOrderRoot, listData: preListData)
+tree.treeLevelOrder(root: preOrderRoot)
+print("FlyElephant")
+
+var binaryTree:BinaryTree = BinaryTree()
+var isBalanced:Bool = binaryTree.isBalanced(root: preOrderRoot)
+if isBalanced {
+    print("FlyElephant---是二叉平衡树")
+} else {
+    print("FlyElehant---不是二叉平衡树")
+}
+
+var isBalanced2:Bool = binaryTree.isBalanced2(root: preOrderRoot)
+if isBalanced2 {
+    print("FlyElephant---是二叉平衡树")
+} else {
+    print("FlyElehant---不是二叉平衡树")
+}
+
+var binarySearchTree:BinarySearchTree = BinarySearchTree()
+var searchData:[Int] = [1,2,3,4,5,6,7]
+var searchNode:TreeNode? = binarySearchTree.createMinBST(arr: searchData, start: 0, end: searchData.count - 1)
+tree.treeLevelOrder(root: searchNode)
+print("FlyElephant")
+
+var searchLevelData:[[String]]? = binarySearchTree.createLevelList(node: searchNode)
+if searchLevelData != nil {
+    print("FlyElephant---层级链表数据---\(searchLevelData!)")
+}
+
+var isBST:Bool = binarySearchTree.isBST(root: searchNode)
+
+if isBST {
+    print("FlyElephant---是二叉查找树")
+} else {
+    print("FlyElephant---不是二叉查找树")
+}
+
+var isBST2:Bool = binarySearchTree.isBST2(root: searchNode)
+
+if isBST2 {
+    print("FlyElephant---是二叉查找树")
+} else {
+    print("FlyElephant---不是二叉查找树")
+}
+
+var isBST3:Bool = binarySearchTree.isBST3(root: searchNode)
+
+if isBST3 {
+    print("FlyElephant---是二叉查找树")
+} else {
+    print("FlyElephant---不是二叉查找树")
+}
 
 
+var sumListData:[String] = ["10","5","4","#","#","7","#","#","12","#","#"]
+var sumNode:TreeNode?
 
+tree.rootIndex = -1
+tree.createTreeByPreOrder(root: &sumNode, listData: sumListData)
+
+binaryTree.findPath(root: sumNode, targetNum: 22)
+print("FlyElephant---和为22的路径----\(binaryTree.pathList)")
+
+var invertNode:TreeNode?
+var invertListData:[String] = ["4","2","1","#","#","3","#","#","7","6","#","#","9","#","#"]
+tree.rootIndex = -1
+tree.createTreeByPreOrder(root: &invertNode, listData: invertListData)
+
+tree.treeLevelOrder(root: invertNode)
+binaryTree.invertTree(rootNode: invertNode)
+tree.treeLevelOrder(root: invertNode)
+print("FlyElephant")
 
 
