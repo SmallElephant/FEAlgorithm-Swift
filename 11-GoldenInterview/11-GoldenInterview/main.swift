@@ -362,4 +362,15 @@ binaryTree.invertTree(rootNode: invertNode)
 tree.treeLevelOrder(root: invertNode)
 print("FlyElephant")
 
+var updateResult:Int = bitManager.updateBits(n: 1024, m: 19, i: 2, j: 6)
+print("FlyElephant---最后的结果:\(updateResult)")
+
+
+var test1:Int = ((10 & 0xaaaaaaaa) >> 1 )
+var test2:Int = ((10 & 0x55555555 ) << 1)
+
+
+var bitNumber:Int = bitManager.swapOddEvenBits(num: 10)
+print("FlyElephant---交换之后的数据---\(bitNumber)")
+
 

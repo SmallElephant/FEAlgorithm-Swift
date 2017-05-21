@@ -40,7 +40,7 @@ class BitManager {
         return count
     }
     
-    // 5.6 给定一个介于0和1之间的实数，类型为double，打印它的二进制表示。如果该数字无法精准地用32位以内的二进制表示，则打印“ERROR”.
+    // 5.2 给定一个介于0和1之间的实数，类型为double，打印它的二进制表示。如果该数字无法精准地用32位以内的二进制表示，则打印“ERROR”.
     func printBinary(num:Float) -> String {
         if num >= 1 && num <= 0 {
             return "ERROR"
@@ -96,6 +96,34 @@ class BitManager {
         }
         
         return binaryString
+    }
+    
+
+    // 5.1给定两个32位的整数N与M，以及表示比特位置的i与j。编写一个方法，将M插入N，使得M从N的第 j 位开始，到第 i 位结束。
+    
+   // 假定从 j 到 i 位足以容纳M，也即若M = 10011， 那么 j 和 i 之间至少可容纳5个位。 例如， 不可能出现 j = 3 和 i = 2的情况，因为第3位和第2位之间放不下M。
+    func updateBits(n:Int,m:Int,i:Int,j:Int) -> Int {
+        
+        // 设置掩码为 11100011
+        let allOnes:Int = ~0
+        
+        let left = allOnes << (j + 1)
+        
+        let right = ((1 << i) - 1)
+        
+        let mask = left | right
+        
+        let n_clear = n & mask
+        let m_shifted = m << i
+        
+        return n_clear | m_shifted
+        
+    }
+    
+    // 5.6 编写程序交换某个整数的奇数位和偶数位，使用指令越少越好（即位0与位1交换，位2与位3交换）。看过题目解析之后才发觉，这题要交换的是整数二进制的奇数和偶数位。
+    
+    func swapOddEvenBits(num:Int) -> Int {
+        return (((num & 0xaaaaaaaa) >> 1 ) | ( ( num & 0x55555555 ) << 1))
     }
     
 }
