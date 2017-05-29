@@ -36,4 +36,87 @@ class Recursion {
         }
     }
     
+    func magicFast(arr:inout [Int],start:Int,end:Int) -> Int {
+        if arr.count == 0 || start < 0 || end >= arr.count || end < start {
+            return -1
+        }
+        
+        let mid:Int = (start + end) / 2
+        
+        let midValue:Int = arr[mid]
+        
+        if mid == midValue {
+            return mid
+        } else if midValue > mid {
+            return magicFast(arr: &arr, start: start, end: mid - 1)
+        } else {
+             return magicFast(arr: &arr, start: mid + 1, end: end)
+        }
+    }
+    
+    func magicFast2(arr:inout [Int],start:Int,end:Int) -> Int {
+        if arr.count == 0 || start < 0 || end >= arr.count || end < start {
+            return -1
+        }
+        
+        let mid:Int = (start + end) / 2
+        
+        let midValue:Int = arr[mid]
+        
+        
+        if mid == midValue {
+            return mid
+        }
+        
+        let leftIndex:Int = min(mid - 1, midValue)
+        let left:Int = magicFast2(arr: &arr, start: start, end: leftIndex)
+        if left >= 0 {
+            return left
+        }
+        
+        let rightIndex:Int = max(mid + 1, midValue)
+        let right:Int = magicFast2(arr: &arr, start: rightIndex, end: end)
+        return right
+    }
+    
+    
+    // 字符串的所有排列组合
+    
+    func getPerms(str:String) -> [String] {
+        
+        var permutations:[String] = []
+        
+        if str.characters.count == 0 {
+            permutations.append("")
+            return permutations
+        }
+        
+        let first:String = str[0]
+        let index = str.index(str.startIndex, offsetBy: 1)
+        let remainder:String = str.substring(from: index)
+        let words:[String] = getPerms(str: remainder)
+        
+        for word in words {
+            
+            for i in 0...word.characters.count {
+                let str:String = insertCharAt(word: word, mid: first, i: i)
+                permutations.append(str)
+            }
+        }
+        
+        return permutations
+    }
+    
+    func insertCharAt(word:String,mid:String,i:Int) -> String {
+        let index = word.index(word.startIndex, offsetBy: i)
+        let start:String = word.substring(to: index)
+        let end:String = word.substring(from: index)
+        let result = start + mid + end
+        
+        return result
+    }
+    
+    
+    
+    
 }

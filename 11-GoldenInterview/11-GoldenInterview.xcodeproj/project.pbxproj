@@ -10,6 +10,8 @@
 		A844CEAE1EC6200900AC7E9C /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844CEAD1EC6200900AC7E9C /* Recursion.swift */; };
 		A89FA9F21EC22DA5001B9A30 /* BitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FA9F11EC22DA5001B9A30 /* BitManager.swift */; };
 		A89FAA121EC288DE001B9A30 /* MyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89FAA111EC288DE001B9A30 /* MyString.swift */; };
+		C5096CF01EDAE28300869BE1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5096CEF1EDAE28300869BE1 /* Operator.swift */; };
+		C5096CF21EDB9FDE00869BE1 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5096CF11EDB9FDE00869BE1 /* Factor.swift */; };
 		C51500C41EA1C70200B98E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500C31EA1C70200B98E5B /* main.swift */; };
 		C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */; };
 		C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3AF1EBD9A84007C2623 /* Stack.swift */; };
@@ -41,6 +43,8 @@
 		A844CEAD1EC6200900AC7E9C /* Recursion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
 		A89FA9F11EC22DA5001B9A30 /* BitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitManager.swift; sourceTree = "<group>"; };
 		A89FAA111EC288DE001B9A30 /* MyString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyString.swift; sourceTree = "<group>"; };
+		C5096CEF1EDAE28300869BE1 /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		C5096CF11EDB9FDE00869BE1 /* Factor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
 		C51500C01EA1C70200B98E5B /* 11-GoldenInterview */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "11-GoldenInterview"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51500C31EA1C70200B98E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		C5096CEE1EDAE25C00869BE1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C5096CEF1EDAE28300869BE1 /* Operator.swift */,
+				C5096CF11EDB9FDE00869BE1 /* Factor.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		C51500B71EA1C70200B98E5B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 			children = (
 				C51500C31EA1C70200B98E5B /* main.swift */,
 				C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */,
+				C5096CEE1EDAE25C00869BE1 /* Other */,
 				C558D4351EC69F55007C2623 /* Tree */,
 				A844CEAC1EC61FF500AC7E9C /* Recursion */,
 				A89FAA101EC288D7001B9A30 /* String */,
@@ -221,10 +235,12 @@
 				C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */,
 				C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */,
 				C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */,
+				C5096CF21EDB9FDE00869BE1 /* Factor.swift in Sources */,
 				C558D4371EC69F69007C2623 /* Tree.swift in Sources */,
 				C558D3B21EBDAB3C007C2623 /* MinStack.swift in Sources */,
 				C558D3B61EBDED1D007C2623 /* Hanoi.swift in Sources */,
 				A89FA9F21EC22DA5001B9A30 /* BitManager.swift in Sources */,
+				C5096CF01EDAE28300869BE1 /* Operator.swift in Sources */,
 				C56C2EA41EC6B4E100A1026A /* BinarySearchTree.swift in Sources */,
 				C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */,
 				A844CEAE1EC6200900AC7E9C /* Recursion.swift in Sources */,

@@ -24,6 +24,7 @@ extension String {
         return self[Range(start..<end)]
     }
     
+    
     func toInt()->Int {
         
         var value:Int = 0

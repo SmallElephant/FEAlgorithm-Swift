@@ -374,3 +374,33 @@ var bitNumber:Int = bitManager.swapOddEvenBits(num: 10)
 print("FlyElephant---交换之后的数据---\(bitNumber)")
 
 
+var operatorNum:Operator = Operator()
+var minusNUm:Int = operatorNum.minus(a: 20, b: 10)
+print("FlyElephant---减法结果:\(minusNUm)")
+
+var multiNum:Int = operatorNum.multiply(a: 10, b: -4)
+print("FlyElephant---乘法结果:\(multiNum)")
+
+var divideNum:Int? = operatorNum.divide(a: 10, b: -3)
+print("FlyElephant---除法结果:\(divideNum!)")
+
+var factor:Factor = Factor()
+var factorNum:Int = factor.getKthFactorNumber(k: 10)
+print("FlyElephant---3,5,7因子数字:\(factorNum)")
+
+var factorNum2:Int = factor.getKthFactorNumber2(k: 10)
+print("FlyElephant---3,5,7因子数字:\(factorNum2)")
+
+var factorNum3:Int = factor.getKthFactorNumber3(k: 10)
+print("FlyElephant---3,5,7因子数字:\(factorNum3)")
+
+var magicArr:[Int] = [-40, -20, -1, 1, 2, 3, 5, 7, 9, 12, 13]
+var magicIndex:Int = recursion.magicFast(arr: &magicArr, start: 0, end: magicArr.count - 1)
+print("FlyElephant---\(magicArr)中间值:\(magicIndex)")
+
+magicArr = [-10, -5, 2, 2, 2, 3, 4, 7, 9, 12, 13]
+magicIndex = recursion.magicFast2(arr: &magicArr, start: 0, end: magicArr.count - 1)
+print("FlyElephant---\(magicArr)中间值:\(magicIndex)")
+
+var permutations:[String] = recursion.getPerms(str: "abc")
+print("字符串排列:\(permutations)")
