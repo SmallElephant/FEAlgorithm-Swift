@@ -112,8 +112,39 @@ class Recursion {
         let start:String = word.substring(to: index)
         let end:String = word.substring(from: index)
         let result = start + mid + end
-        
         return result
+    }
+    
+    //给定数量不限的硬币，币值为25分，10分，5分和1分，编写代码计算n分有几种表示法
+    
+    func makeChange(n:Int,denom:Int) -> Int {
+        
+        var next_denom:Int = 0
+        switch denom {
+        case 25:
+            next_denom = 10
+            break
+        case 10:
+            next_denom = 5
+            break
+        case 5:
+            next_denom = 1
+            break
+        case 1:
+            return 1
+        default:
+            break
+        }
+        
+        var ways:Int = 0
+        
+        var i:Int = 0
+        
+        while i * denom <= n {
+            ways += makeChange(n: n - i * denom, denom: next_denom)
+            i += 1
+        }
+        return ways
     }
     
     

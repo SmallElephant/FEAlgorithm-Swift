@@ -403,4 +403,7 @@ magicIndex = recursion.magicFast2(arr: &magicArr, start: 0, end: magicArr.count 
 print("FlyElephant---\(magicArr)中间值:\(magicIndex)")
 
 var permutations:[String] = recursion.getPerms(str: "abc")
-print("字符串排列:\(permutations)")
+print("FlyElephant---字符串排列:\(permutations)")
+
+var ways:Int = recursion.makeChange(n: 100, denom: 25)
+print("FlyElephant---100分的表示方式:\(ways)")
