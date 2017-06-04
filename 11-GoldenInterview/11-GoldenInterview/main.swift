@@ -407,3 +407,12 @@ print("FlyElephant---字符串排列:\(permutations)")
 
 var ways:Int = recursion.makeChange(n: 100, denom: 25)
 print("FlyElephant---100分的表示方式:\(ways)")
+
+var left:Int = 1 << 3
+print("左移动之后的数据:\(left)")
+
+
+var checkData:[Int] = [1, 2, 24, 800 ,10, 20, 800, 2, 9]
+bitManager.checkDuplicates(arr: checkData)
+
+

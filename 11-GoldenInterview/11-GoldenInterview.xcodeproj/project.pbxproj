@@ -14,6 +14,7 @@
 		C5096CF21EDB9FDE00869BE1 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5096CF11EDB9FDE00869BE1 /* Factor.swift */; };
 		C51500C41EA1C70200B98E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500C31EA1C70200B98E5B /* main.swift */; };
 		C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */; };
+		C5229F9A1EE3F4B100405F13 /* BitSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5229F991EE3F4B100405F13 /* BitSet.swift */; };
 		C558D3B01EBD9A84007C2623 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3AF1EBD9A84007C2623 /* Stack.swift */; };
 		C558D3B21EBDAB3C007C2623 /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B11EBDAB3C007C2623 /* MinStack.swift */; };
 		C558D3B41EBDC611007C2623 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558D3B31EBDC611007C2623 /* Stacks.swift */; };
@@ -48,6 +49,7 @@
 		C51500C01EA1C70200B98E5B /* 11-GoldenInterview */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "11-GoldenInterview"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51500C31EA1C70200B98E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C51500CA1EA1C7C300B98E5B /* SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
+		C5229F991EE3F4B100405F13 /* BitSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitSet.swift; sourceTree = "<group>"; };
 		C558D3AF1EBD9A84007C2623 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		C558D3B11EBDAB3C007C2623 /* MinStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
 		C558D3B31EBDC611007C2623 /* Stacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A89FA9F11EC22DA5001B9A30 /* BitManager.swift */,
+				C5229F991EE3F4B100405F13 /* BitSet.swift */,
 			);
 			path = Bit;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				C51500C41EA1C70200B98E5B /* main.swift in Sources */,
 				C5DB70131EAB41B00025D51D /* ListNodeManager.swift in Sources */,
 				C558D3B81EBEBB68007C2623 /* MyQueue.swift in Sources */,
+				C5229F9A1EE3F4B100405F13 /* BitSet.swift in Sources */,
 				C51500CB1EA1C7C300B98E5B /* SwiftExtension.swift in Sources */,
 				C5096CF21EDB9FDE00869BE1 /* Factor.swift in Sources */,
 				C558D4371EC69F69007C2623 /* Tree.swift in Sources */,

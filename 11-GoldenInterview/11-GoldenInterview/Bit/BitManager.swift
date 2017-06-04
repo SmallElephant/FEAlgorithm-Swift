@@ -126,4 +126,22 @@ class BitManager {
         return (((num & 0xaaaaaaaa) >> 1 ) | ( ( num & 0x55555555 ) << 1))
     }
     
+    
+    func checkDuplicates(arr:[Int]) {
+        
+        let bitSet:BitSet = BitSet(size: 32000)
+        
+        for i in 0..<arr.count {
+            
+            let num = arr[i]
+            let num0 = num - 1
+            
+            if bitSet.get(pos: num0) {
+                print("FlyElephant---重复数据:\(num)")
+            } else {
+                bitSet.set(pos: num0)
+            }
+        }
+    }
+    
 }
